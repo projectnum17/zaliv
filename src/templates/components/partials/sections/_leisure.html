@@ -1,0 +1,11 @@
+<section class="leisure">
+    <div class="container">
+        {{> _filterPanel}}
+        <div class="leisure__boxes">
+            {{#each leisure.leisure}}
+                {{> _leisureBox this}}
+            {{/each}}
+            <p class="leisure__empty" style="display: none;">Наразі, немає доступних івентів</p>
+        </div>
+    </div>
+</section>

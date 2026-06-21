@@ -1,0 +1,41 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.filter-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(40px);
+    gap: rem(40px);
+
+    &__btn {
+        font: 400 #{rem(13px)} / 100% $ff;
+        text-transform: uppercase;
+        position: relative;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            color: $c_accent;
+        }
+
+        &.is-active {
+            color: $c_accent;
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 0;
+            bottom: rem(-4px);
+            background: $c_accent;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "leisure": [
+        {
+            "title": "Спорт майданчик",
+            "picture": "./assets/images/menu_1.jpg"
+        },
+        {
+            "title": "САПи та каяки",
+            "picture": "./assets/images/menu_2.jpg"
+        },
+        {
+            "title": "Канатний парк",
+            "picture": "./assets/images/menu_3.jpg"
+        },
+        {
+            "title": "Риболовля",
+            "picture": "./assets/images/menu_4.jpg"
+        },
+        {
+            "title": "Охота",
+            "picture": "./assets/images/menu_5.jpg"
+        },
+        {
+            "title": "Вело тури ",
+            "picture": "./assets/images/menu_6.jpg"
+        },
+        {
+            "title": "Грибний та ягідний сезон",
+            "picture": "./assets/images/menu_7.jpg"
+        },
+        {
+            "title": "Екскурсії на баггі",
+            "picture": "./assets/images/menu_8.jpg"
+        }
+    ]
+}

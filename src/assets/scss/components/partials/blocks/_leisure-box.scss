@@ -1,0 +1,86 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.leisure-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    aspect-ratio: 720 / 587;
+    color: $c_white;
+
+    @include hover {
+        .leisure-box__preview {
+            img {
+                transform: scale(1.15);
+            }
+        }
+
+        .link-more {
+            color: $c_accent;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(24, 38, 21, 0) 57.2%,
+            #182615 100%
+        );
+    }
+
+    &__preview {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        padding: rem(30px) rem(35px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+        z-index: 2;
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font: 400 #{rem(30px)} / 100% $ff_accent;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        p {
+            font: 400 #{rem(16px)} / 140% $ff;
+            margin: 0;
+            color: #ffffffb2;
+        }
+
+        ul,
+        ol {
+            li {
+                font: 400 #{rem(16px)} / 140% $ff;
+                color: #ffffffb2;
+            }
+        }
+    }
+}
