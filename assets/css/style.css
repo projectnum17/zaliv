@@ -1009,6 +1009,56 @@ section {
   margin-bottom: 0;
 }
 
+.intro {
+  position: relative;
+  min-height: 34.625rem;
+  padding-block: calc(var(--header-h) + 5.9375rem) 2.5rem;
+  background: linear-gradient(90deg, #22351e 0%, #2e4929 100%);
+  color: #ffffff;
+}
+
+.intro .container * {
+  position: relative;
+  z-index: 2;
+}
+
+.intro__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.intro .section-heading {
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro .section-heading__deco {
+  margin-bottom: 3.125rem;
+}
+
+.leisure {
+  padding-block: 2.5rem 9.375rem;
+}
+
+.leisure__boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.875rem 1.25rem;
+}
+
+.leisure__empty {
+  grid-column: span 2;
+  text-align: center;
+  font: 400 1.875rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
 .assortment-box {
   min-width: 26.5625rem;
   display: flex;
@@ -1292,6 +1342,69 @@ section {
   margin-bottom: 0;
 }
 
+.leisure-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  aspect-ratio: 720/587;
+  color: #ffffff;
+}
+
+.leisure-box::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(24, 38, 21, 0) 57.2%, #182615 100%);
+}
+
+.leisure-box__preview {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.leisure-box__preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: all 0.5s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+}
+
+.leisure-box__info {
+  position: absolute;
+  bottom: 0;
+  padding: 1.875rem 2.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  z-index: 2;
+}
+
+.leisure-box__info h2,
+.leisure-box__info h3,
+.leisure-box__info h4,
+.leisure-box__info h5,
+.leisure-box__info h6 {
+  font: 400 1.875rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.leisure-box__info p {
+  font: 400 1rem/140% "e-Ukraine", sans-serif;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+
+.leisure-box__info ul li,
+.leisure-box__info ol li {
+  font: 400 1rem/140% "e-Ukraine", sans-serif;
+  color: rgba(255, 255, 255, 0.6980392157);
+}
+
 .reserve-form {
   max-width: 35.125rem;
 }
@@ -1446,6 +1559,39 @@ section {
   overflow: hidden;
 }
 
+.filter-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  gap: 2.5rem;
+}
+
+.filter-panel__btn {
+  font: 400 0.8125rem/100% "e-Ukraine", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+}
+
+.filter-panel__btn.is-active {
+  color: #56ae47;
+}
+
+.filter-panel__btn.is-active::after {
+  width: 100%;
+}
+
+.filter-panel__btn::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  bottom: -0.25rem;
+  background: #56ae47;
+  transition: all 0.3s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -1568,8 +1714,20 @@ section {
     color: #56ae47;
   }
 
+  .leisure-box:hover .leisure-box__preview img {
+    transform: scale(1.15);
+  }
+
+  .leisure-box:hover .link-more {
+    color: #56ae47;
+  }
+
   .navigation-panel__btn:hover {
     background: #1e2d1a;
+  }
+
+  .filter-panel__btn:hover {
+    color: #56ae47;
   }
 }
 
@@ -1684,7 +1842,19 @@ section {
     color: #56ae47;
   }
 
+  .leisure-box:active .leisure-box__preview img {
+    transform: scale(1.15);
+  }
+
+  .leisure-box:active .link-more {
+    color: #56ae47;
+  }
+
   .navigation-panel__btn:active {
     background: #1e2d1a;
+  }
+
+  .filter-panel__btn:active {
+    color: #56ae47;
   }
 }
