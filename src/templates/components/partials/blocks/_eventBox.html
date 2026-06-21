@@ -1,0 +1,27 @@
+<a href="javascript: void(0)" class="event-box">
+    <div class="event-box__pic">
+        <img src="{{ picture }}" alt="Picture">
+    </div>
+    <div class="event-box__details">
+        <div class="event-box__head">
+            <div class="event-box__offer">
+                {{#if date}}
+                    <span>{{ date }}</span>
+                    <p>{{{ month }}}</p>
+                {{/if}}
+
+                {{#if discount}}
+                    <span>{{ discount }}</span>
+                    <p>{{{ offer }}}</p>
+                {{/if}}
+            </div>
+            <div class="event-box__deco">
+                {{> _wavesDeco}}
+            </div>
+        </div>
+        <div class="event-box__info">
+            <h3>{{ title }}</h3>
+            <p>{{ description }}</p>
+        </div>
+    </div>
+</a>

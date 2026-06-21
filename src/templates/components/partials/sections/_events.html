@@ -1,0 +1,21 @@
+<section class="events">
+    <div class="container">
+        {{> _sectionHeading
+            title = '<span>Акції</span> та події'
+            link = 1
+        }}
+        <div class="events__root js-events-root">
+            <div class="events__cards swiper">
+                <div class="events__wrapper swiper-wrapper">
+                    {{#each events.promo}}
+                        <div class="events__slide swiper-slide">
+                            {{> _eventBox this}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{> _navigationPanel}}
+        </div>
+    </div>
+    <img src="./assets/images/forest.png" alt="" class="events__bg">
+</section>

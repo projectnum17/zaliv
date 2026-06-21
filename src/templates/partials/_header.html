@@ -1,1 +1,59 @@
-<header>header</header>
+<header class="header js-header">
+    <div class="container">
+        <a href="/" class="header__logo">
+            <img width="135" height="54" src="./assets/images/icons/logo.png" alt="Logo">
+        </a>
+        <nav class="header__nav js-header-nav">
+            <ul class="header__list">
+                {{#each navigation.header}}
+                <li>
+                    <a href="javascript: void(0)">{{ title }}</a>
+                    {{#if submenu}}
+                    <ul class="sub-menu">
+                        <li>
+                            <ul>
+                                {{#each submenu}}
+                                <li>
+                                    <a href="javascript: void(0)">
+                                        <div>
+                                            <img loading="lazy" decoding="async" src="{{ picture }}" alt="Picture">
+                                        </div>
+                                        <p>{{ title }}</p>
+                                    </a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    </ul>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+        <div class="header__controls">
+            <ul class="header__lang js-lang-trigger">
+                <li class="header__lang-current is-current">
+                    <span class="header__lang-label">UA</span>
+                    <svg>
+                        <use href="./assets/images/icons/svg/sprite.svg#icoDrop"></use>
+                    </svg>
+                </li>
+                <li class="header__lang-inner">
+                    <ul class="header__lang-list glass-effect">
+                        <li class="header__lang-item header__lang-item--active">
+                            <span class="header__lang-link">
+                                UA
+                            </span>
+                        </li>
+                        <li class="header__lang-item">
+                            <a class="header__lang-link" href="#!">
+                                EN
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="javascript: void(0)" class="cta cta--sm js-cta">Забронювати</a>
+        </div>
+    </div>
+</header>

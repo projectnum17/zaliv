@@ -1,0 +1,22 @@
+<section class="entertainment entertainment--bg">
+    <div class="container">
+        {{> _sectionHeading
+            title = 'У нас вам <span>не буде сумно</span>'
+            decoration = 1
+            link = 1
+        }}
+        <div class="entertainment__root js-fun-root">
+            <div class="entertainment__boxes swiper">
+                <div class="entertainment__wrapper swiper-wrapper">
+                    {{#each entertainment.fun}}
+                        <div class="entertainment__slide swiper-slide">
+                            {{> _entertainmentBox this}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{> _navigationPanel}}
+        </div>
+    </div>
+    <img src="./assets/images/forest.png" alt="" class="entertainment__bg">
+</section>

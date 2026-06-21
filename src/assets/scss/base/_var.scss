@@ -1,14 +1,26 @@
 @use 'media' as *;
 @use 'mixins' as *;
 
+$ff: 'e-Ukraine', sans-serif;
+$ff_accent: 'Veruna', sans-serif;
 $system-ff:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, sans-serif;
 
-$container_wdth: #{rem(1430px)};
-$container_pdd: #{rem(12px)};
+$container_wdth: #{rem(1500px)};
+$container_pdd: #{rem(20px)};
+
+$c_accent: #56ae47;
+$c_accent_drk: #1e2d1a;
+$c_gr_titles: #4a4a4a;
+$c_light: #cccab6;
+$c_beige: #ece7d3;
+$c_white: #ffffff;
+
+$gr_accent: linear-gradient(90deg, #22351e 0%, #2e4929 100%);
 
 :root {
+    --header-h: #{rem(74px)};
 }
 
 @include media('tablet') {

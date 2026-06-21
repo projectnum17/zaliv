@@ -1,0 +1,22 @@
+<section class="entertainment{{#if bg}} entertainment--bg{{/if}}">
+    <div class="container">
+        {{> _sectionHeading
+            title = 'Все для вашого <span>відпочинку</span>'
+            decoration = 1
+            lg = 1
+        }}
+        <div class="entertainment__root js-relax-root">
+            <div class="entertainment__boxes swiper">
+                <div class="entertainment__wrapper swiper-wrapper">
+                    {{#each entertainment.relax}}
+                        <div class="entertainment__slide swiper-slide">
+                            {{> _entertainmentBox this}}
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{> _navigationPanel}}
+        </div>
+        <img src="./assets/images/icons/logo-text.svg" alt="" class="entertainment__text">
+    </div>
+</section>

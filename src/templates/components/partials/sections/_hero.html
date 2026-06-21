@@ -1,0 +1,39 @@
+<section class="hero">
+    <div class="container">
+        <div class="hero__info">
+            <div class="hero__details">
+                <ul class="hero__schedule">
+                    <li>
+                        <svg>
+                            <use href="./assets/images/icons/svg/sprite.svg#icoPin"></use>
+                        </svg>
+                        <p>Рівненська обл, Сарненський р-н, с. Страшево , вул Робітнича, 3</p>
+                    </li>
+                    <li>
+                        <svg>
+                            <use href="./assets/images/icons/svg/sprite.svg#icoClock"></use>
+                        </svg>
+                        <p>10:00 - 21:00</p>
+                    </li>
+                </ul>
+                <h1 class="section-title">Ваше місце <span>сили</span></h1>
+                <div class="hero__description">
+                    <p>
+                        Місце, куди хочеться повертатись і звідки не хочеться їхати. Це місце, де повертається сила та
+                        радість життя. Це місце — Zaliv, гавань твоїх щасливих моментів.
+                    </p>
+                </div>
+                {{> _linkMore
+                    url = 'tel:+380999879877'
+                    label ='+380 99 987 98 77'
+                    lg = 1
+                }}
+                {{> _reserveForm}}
+            </div>
+        </div>
+        <div class="hero__pic">
+            <img src="./assets/images/hero.png" alt="Picture">
+        </div>
+    </div>
+    <img src="./assets/images/bg-forest_2.png" alt="" class="hero__bg">
+</section>

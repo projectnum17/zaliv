@@ -1,0 +1,22 @@
+<a href="javascript: void(0)" class="assortment-box js-assortment-box">
+    <img src="{{ picture }}" alt="Preview">
+    {{#if discount}}
+        <span class="assortment-box__discount">-15%</span>
+    {{/if}}
+    <div class="assortment-box__info">
+        <div class="assortment-box__deco">
+            {{> _wavesDeco}}
+        </div>
+        <div class="assortment-box__title">
+            <p>{{ title }}</p>
+            <span>
+                <svg>
+                    <use href="./assets/images/icons/svg/sprite.svg#icoArrowR"></use>
+                </svg>
+            </span>
+        </div>
+        <div class="assortment-box__details">
+            <p>{{ description }}</p>
+        </div>
+    </div>
+</a>

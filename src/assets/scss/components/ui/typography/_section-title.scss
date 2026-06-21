@@ -1,0 +1,12 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.section-title {
+    font: 400 #{rem(76px)} / 100% $ff_accent;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    span {
+        color: $c_accent;
+    }
+}

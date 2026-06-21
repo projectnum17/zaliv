@@ -3,6 +3,6 @@
 
 .container {
     max-width: $container_wdth;
-    padding-inline: var(--container_pdd);
+    padding-inline: $container_pdd;
     margin: 0 auto;
 }

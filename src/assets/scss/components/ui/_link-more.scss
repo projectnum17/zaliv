@@ -1,0 +1,36 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.link-more {
+    font: 400 #{rem(13px)} / 100% $ff;
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    gap: rem(15px);
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        color: $c_accent;
+    }
+    &--lg {
+        font: 500 #{rem(20px)} / 100% $ff;
+    }
+
+    span {
+        flex: s 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: rem(25px);
+        height: rem(25px);
+        background: $c_accent;
+    }
+
+    svg {
+        width: rem(12px);
+        height: rem(12px);
+        color: $c_white;
+    }
+}

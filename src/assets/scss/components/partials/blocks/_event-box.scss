@@ -1,0 +1,111 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.event-box {
+    height: 100%;
+    display: flex;
+    color: $c_white;
+    @include hover {
+        .event-box__pic img {
+            transform: scale(1.15);
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $c_accent;
+        }
+    }
+
+    &__pic,
+    &__details {
+        width: 50%;
+    }
+
+    &__pic {
+        overflow: hidden;
+        aspect-ratio: 348 / 354;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        gap: rem(30px);
+    }
+
+    &__deco {
+        max-width: rem(62px);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__offer {
+        display: flex;
+        gap: rem(12px);
+        span {
+            font: 400 #{rem(42px)} / 100% $ff_accent;
+            text-transform: uppercase;
+            color: $c_accent;
+        }
+        p {
+            font: 300 #{rem(14px)} / 140% $ff;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: rem(12px);
+        padding: rem(30px);
+        background: $c_accent_drk;
+    }
+
+    &__info {
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font: 400 #{rem(24px)} / 110% $ff_accent;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin: 0 0 rem(10px) 0;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+        p {
+            font: 300 #{rem(14px)} / 160% $ff;
+            color: #ffffff80;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 rem(10px) 0;
+            padding: 0 0 0 rem(24px);
+            li {
+                font: 300 #{rem(14px)} / 160% $ff;
+                color: #ffffff80;
+            }
+        }
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

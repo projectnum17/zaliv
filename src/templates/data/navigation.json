@@ -1,0 +1,332 @@
+{
+    "header": [
+        {
+            "title": "Жити",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Їсти",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Релаксувати",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Активно відпочивати ",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Святкувати",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Дітям",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Важливо знати ",
+            "submenu": [
+                {
+                    "title": "Спорт майданчик",
+                    "picture": "./assets/images/menu_1.jpg"
+                },
+                {
+                    "title": "САПи та каяки",
+                    "picture": "./assets/images/menu_2.jpg"
+                },
+                {
+                    "title": "Канатний парк",
+                    "picture": "./assets/images/menu_3.jpg"
+                },
+                {
+                    "title": "Риболовля",
+                    "picture": "./assets/images/menu_4.jpg"
+                },
+                {
+                    "title": "Охота",
+                    "picture": "./assets/images/menu_5.jpg"
+                },
+                {
+                    "title": "Вело тури ",
+                    "picture": "./assets/images/menu_6.jpg"
+                },
+                {
+                    "title": "Грибний та ягідний сезон",
+                    "picture": "./assets/images/menu_7.jpg"
+                },
+                {
+                    "title": "Екскурсії на баггі",
+                    "picture": "./assets/images/menu_8.jpg"
+                }
+            ]
+        }
+    ],
+    "footer": [
+        {
+            "active": {
+                "heading": "Активно відпочивати",
+                "menu": [
+                    { "title": "Спортивний майданчик" },
+                    { "title": "САПи та каяки " },
+                    { "title": "Риболовля" },
+                    { "title": "Охота " },
+                    { "title": "Фото-сафарі" },
+                    { "title": "Фітнес-центр" },
+                    { "title": "Вело тури" },
+                    { "title": "Грибні тури" },
+                    { "title": "Ягідні тури " }
+                ]
+            },
+            "relax": {
+                "heading": "Релаксувати",
+                "menu": [
+                    { "title": "Банний комплекс" },
+                    { "title": "Басейн " },
+                    { "title": "Озеро " },
+                    { "title": "Годувати тваринок " }
+                ]
+            },
+            "eating": {
+                "heading": "Їсти",
+                "menu": [
+                    { "title": "Ресторан локальної кухні" },
+                    { "title": "BBQ фудкорт" },
+                    { "title": "Озеро " },
+                    { "title": "Бар біля басейну" }
+                ]
+            },
+            "lives": {
+                "heading": "Жити",
+                "menu": [
+                    { "title": "Будиночки зі зрубу " },
+                    { "title": "Котеджі «Хілс»" },
+                    { "title": "Котеджі «Мальдиви» " },
+                    { "title": "Глемпінг біля озера " }
+                ]
+            },
+            "holidays": {
+                "heading": "Святкувати",
+                "menu": [
+                    { "title": "Весілля" },
+                    { "title": "Корпоративи" },
+                    { "title": "Особисті подїї" }
+                ]
+            },
+            "child": {
+                "heading": "Дітям",
+                "menu": [
+                    { "title": "Дитяча кімната " },
+                    { "title": "Анімація " },
+                    { "title": "Спортивний майданчик " }
+                ]
+            },
+            "faq": {
+                "heading": "Важливо знати ",
+                "menu": [
+                    { "title": "Як нас знайти" },
+                    { "title": "Афіша подій" },
+                    { "title": "Партнерство та інвестування" }
+                ]
+            }
+        }
+    ]
+}

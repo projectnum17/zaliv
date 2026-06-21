@@ -1,1 +1,127 @@
-<footer>footer</footer>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__details">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <img width="157" height="62" loading="lazy" decoding="async" src="./assets/images/icons/logo.png"
+                        alt="Logo">
+                </div>
+                <div class="footer__support">
+                    <div class="footer__call">
+                        <p class="footer__title">Відділ бронювання</p>
+                        <a href="tel:+380999999999" class="footer__connect">+38 (099) 999-99-99</a>
+                    </div>
+                    <div class="footer__call">
+                        <p class="footer__title">Бронювання житла</p>
+                        <a href="tel:+380999999999" class="footer__connect">+38 (099) 999-99-99</a>
+                    </div>
+                </div>
+                <div class="footer__address">
+                    <p class="footer__title">Як нас знайти</p>
+                    <p class="footer__target">
+                        Рівненська обл, Сарненський р-н, с. Страшево, вул Робітнича , ворота з надписом «Залив»
+                    </p>
+                </div>
+                <a href="javascript: void(0)" target="_blank" class="footer__map">
+                    Показати на карті
+                </a>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-nav__col">
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ active.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each active.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="footer-nav__col">
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ relax.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each relax.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ eating.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each eating.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ lives.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each lives.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="footer-nav__col">
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ holidays.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each holidays.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ child.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each child.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                    <div class="footer-nav__box">
+                        {{#each navigation.footer}}
+                            <p class="footer-nav__title">{{ faq.heading }}</p>
+                            <ul class="footer-nav__list">
+                                {{#each faq.menu}}
+                                <li>
+                                    <a href="javascript: void(0)">{{ title }}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <p>2026. Всі права захищені</p>
+        </div>
+    </div>
+    <img src="./assets/images/bg-forest.png" alt="" class="footer__bg">
+</footer>

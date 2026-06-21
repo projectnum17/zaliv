@@ -1,0 +1,49 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.navigation-panel {
+    padding-top: rem(40px);
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+    justify-content: center;
+
+    &:has(.swiper-button-lock) {
+        display: none;
+    }
+
+    &__btn {
+        border: 1px solid transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(62px);
+        height: rem(62px);
+        border-radius: 50%;
+        background: $c_accent;
+        color: $c_white;
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include hover {
+            background: #1e2d1a;
+        }
+
+        &.swiper-button-disabled {
+            pointer-events: none;
+            background: #cccab6;
+        }
+
+        svg {
+            width: rem(30px);
+            height: rem(30px);
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        &:first-child {
+            transform: rotate(180deg);
+        }
+    }
+}

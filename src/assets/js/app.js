@@ -1,7 +1,15 @@
 'use strict';
 
-import { example } from './modules/example';
+import { initHeader } from './modules/initHeader';
+import { initForms } from './modules/initForms';
+import { initAssortmentBox } from './modules/initAssortmentBox';
+import { initSliders } from './modules/initSliders';
+import { initFaqBox } from './modules/initFaqBox';
 
 document.addEventListener('DOMContentLoaded', () => {
-    example();
+    initHeader();
+    initForms();
+    initAssortmentBox();
+    initSliders();
+    initFaqBox();
 });

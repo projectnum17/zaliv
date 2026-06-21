@@ -1,0 +1,16 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.action {
+    font: 400 #{rem(13px)} / 100% $ff;
+    text-transform: uppercase;
+    padding: rem(20px) rem(67px);
+    color: $c_white;
+    border: 1px solid $c_white;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        color: $c_accent_drk;
+        background: $c_white;
+    }
+}

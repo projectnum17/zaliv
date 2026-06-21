@@ -1,0 +1,21 @@
+<section class="faq">
+    <div class="container">
+        <div class="faq__preview">
+            {{> _sectionHeading
+                title = 'Відповіді на ваші <span>запитання</span>'
+                decoration = 1
+            }}
+            <div class="faq__pic">
+                <img loading="lazy" decoding="async" src="./assets/images/animals.svg" alt="Picture">
+            </div>
+            <div class="faq__deco">
+                <img loading="lazy" decoding="async" src="./assets/images/faq-deco.svg" alt="">
+            </div>
+        </div>
+        <div class="faq__list">
+            {{#each faq.faq}}
+                {{> _faqBox this}}
+            {{/each}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,90 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.faq-box {
+    &:not(:last-child) {
+        padding-bottom: rem(30px);
+        border-bottom: 1px solid $c_light;
+    }
+
+    &:has(.is-open) {
+        .faq-box__question {
+            span {
+                transform: rotate(90deg);
+
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+        .faq-box__answer {
+            margin-top: rem(15px);
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__question {
+        font: 400 #{rem(24px)} / 110% $ff_accent;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(12px);
+        color: #000;
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-shrink: 0;
+            border-radius: 50%;
+            width: rem(30px);
+            height: rem(30px);
+            background: $c_accent;
+            @include transitions(
+                0.5s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: rem(15px);
+                height: rem(1px);
+                background: #fff;
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+
+    &__answer {
+        display: grid;
+        grid-template-rows: 0fr;
+        font: 300 #{rem(16px)} / 160% $ff;
+        color: #00000080;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        p {
+            overflow: hidden;
+        }
+    }
+}

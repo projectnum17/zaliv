@@ -1,0 +1,25 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.cta {
+    font: 400 #{rem(13px)} / 100% $ff;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(21px) rem(42px);
+    color: $c_white;
+    background: $c_accent;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    &--sm {
+        padding: rem(14px) rem(30px);
+        min-height: rem(44px);
+    }
+    &--lg {
+        padding: rem(31px);
+    }
+    @include hover {
+        background: #407a35;
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.reserve-form {
+    max-width: rem(562px);
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(2px);
+        width: 100%;
+    }
+
+    &__title {
+        font: 500 #{rem(12px)} / 100% $ff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $c_accent;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        padding: rem(12px) rem(12px);
+        gap: rem(14px);
+        min-height: rem(78px);
+        background: #0d160c4d;
+    }
+
+    .cta {
+        gap: rem(10px);
+        svg {
+            width: rem(16px);
+            height: rem(16px);
+            color: $c_white;
+        }
+    }
+}

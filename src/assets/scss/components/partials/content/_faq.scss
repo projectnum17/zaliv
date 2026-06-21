@@ -1,0 +1,57 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.faq {
+    padding-block: rem(130px) rem(115px);
+    &__list {
+        max-width: rem(750px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(30px);
+        padding-block: rem(30px);
+        border-top: 1px solid $c_light;
+        border-bottom: 1px solid $c_light;
+    }
+
+    &__preview {
+        max-width: rem(588px);
+        position: relative;
+    }
+
+    &__deco {
+        pointer-events: none;
+        top: rem(130px);
+        right: -rem(120px);
+        z-index: -1;
+
+        position: absolute;
+        max-width: rem(378px);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__pic {
+        max-width: rem(372px);
+        img {
+            width: 100%;
+        }
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        margin-bottom: rem(24px);
+
+        &__deco {
+            margin-bottom: rem(31px);
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(12px);
+    }
+}
