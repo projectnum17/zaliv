@@ -4,10 +4,20 @@ pageName: Home
 pageDescription: Home
 ---
 
-{{> _hero}}
+{{> _hero
+    edditClass = 1
+    sch = 1
+    form = 1
+    call = 1
+    title = 'Ваше місце <span>сили</span>'
+    description = 'Місце, куди хочеться повертатись і звідки не хочеться їхати. Це місце, де повертається сила та радість життя. Це місце — Zaliv, гавань твоїх щасливих моментів.'
+    picture = './assets/images/hero.png'
+}}
 {{> _assortment}}
 {{> _entertainment}}
-{{> _entertainmentBg}}
+{{> _entertainmentBg
+    title = 'У нас вам <span>не буде сумно</span>'
+}}
 {{> _plan}}
 {{> _events}}
 {{> _faq}}

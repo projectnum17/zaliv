@@ -1,0 +1,65 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.road-box {
+    padding-bottom: rem(50px);
+    display: flex;
+    align-items: flex-start;
+    counter-increment: road;
+    gap: rem(117px);
+    border-bottom: 1px solid $c_light;
+    &::after {
+        order: 2;
+        content: counter(road, decimal-leading-zero);
+        font: 400 #{rem(42px)} / 100% $ff_accent;
+        text-transform: uppercase;
+        opacity: 0.4;
+        color: #000;
+    }
+
+    &__pic {
+        max-width: rem(493px);
+        width: 100%;
+        order: 1;
+        aspect-ratio: 493 / 332;
+        display: flex;
+        align-items: flex-start;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font: 400 #{rem(42px)} / 100% $ff_accent;
+        text-transform: uppercase;
+        span {
+            color: $c_accent;
+        }
+    }
+
+    &__info {
+        max-width: rem(622px);
+        width: 100%;
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        gap: rem(38px);
+    }
+
+    &__details {
+        font: 300 #{rem(13px)} / 160% $ff;
+        color: #4a4a4a;
+        *:last-child {
+            margin-bottom: 0;
+        }
+
+        p,
+        ul,
+        ol {
+            margin: 0 0 rem(24px) 0;
+        }
+    }
+}

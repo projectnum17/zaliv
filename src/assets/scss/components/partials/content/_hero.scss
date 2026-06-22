@@ -8,6 +8,24 @@
     color: $c_white;
     background: $gr_accent;
 
+    &:has(.hero__info .hero__description + .cta) {
+        .container {
+            align-items: stretch;
+        }
+
+        .hero__details {
+            height: 100%;
+        }
+
+        .hero__info {
+            padding-top: rem(100px);
+        }
+
+        .link-more {
+            margin-top: auto;
+        }
+    }
+
     .container {
         display: flex;
         align-items: center;
@@ -16,6 +34,16 @@
         * {
             position: relative;
             z-index: 2;
+        }
+    }
+
+    .cta {
+        padding: rem(18px) rem(40px);
+    }
+
+    .link-more {
+        span  {
+            transform: rotate(90deg);
         }
     }
 
@@ -30,6 +58,18 @@
         display: flex;
         flex-direction: column;
         gap: rem(37px);
+
+        &:has(.hero__description + .cta) {
+            gap: 0;
+
+            .section-title {
+                margin-bottom: rem(20px);
+            }
+
+            .hero__description {
+                margin-bottom: rem(44px);
+            }
+        }
     }
 
     &__schedule {
@@ -71,7 +111,10 @@
         max-width: rem(748px);
         border-radius: rem(40px);
         overflow: hidden;
-        mix-blend-mode: hard-light;
+
+        &--filtered {
+            mix-blend-mode: hard-light;
+        }
 
         img {
             width: 100%;

@@ -1,0 +1,24 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.road {
+    padding-block: rem(38px) rem(75px);
+    position: relative;
+
+    &__cards {
+        padding-block: rem(92px) 0;
+        display: flex;
+        flex-direction: column;
+        gap: rem(50px);
+        max-width: rem(1395px);
+    }
+
+    &__pic {
+        position: absolute;
+        right: rem(42px);
+        top: rem(38px);
+        pointer-events: none;
+        z-index: -1;
+    }
+}

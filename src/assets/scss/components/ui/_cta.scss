@@ -3,6 +3,7 @@
 @use '../../base/media' as *;
 
 .cta {
+    width: max-content;
     font: 400 #{rem(13px)} / 100% $ff;
     text-transform: uppercase;
     display: inline-flex;

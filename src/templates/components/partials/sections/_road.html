@@ -1,0 +1,10 @@
+<section class="road" id="target">
+    <div class="container">
+        <div class="road__cards">
+            {{#each road.road}}
+                {{> _roadBox this}}
+            {{/each}}
+        </div>
+    </div>
+    <img src="./assets/images/rabit.svg" alt="" class="road__pic">
+</section>

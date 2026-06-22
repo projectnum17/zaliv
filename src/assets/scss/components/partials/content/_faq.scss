@@ -22,7 +22,7 @@
     &__deco {
         pointer-events: none;
         top: rem(130px);
-        right: -rem(120px);
+        right: rem(-120px);
         z-index: -1;
 
         position: absolute;

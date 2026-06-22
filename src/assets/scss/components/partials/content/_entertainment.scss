@@ -18,6 +18,7 @@
         top: rem(-70px);
         height: rem(629px);
         object-fit: cover;
+        z-index: -1;
     }
 
     &__text {
