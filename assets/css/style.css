@@ -136,6 +136,7 @@ svg * {
 
 html {
   font-size: 16px;
+  scroll-padding-top: var(--header-h);
 }
 
 body {
@@ -206,6 +207,8 @@ section {
 }
 
 .cta {
+  width: -moz-max-content;
+  width: max-content;
   font: 400 0.8125rem/100% "e-Ukraine", sans-serif;
   text-transform: uppercase;
   display: inline-flex;
@@ -638,6 +641,22 @@ section {
   background: linear-gradient(90deg, #22351e 0%, #2e4929 100%);
 }
 
+.hero:has(.hero__info .hero__description + .cta) .container {
+  align-items: stretch;
+}
+
+.hero:has(.hero__info .hero__description + .cta) .hero__details {
+  height: 100%;
+}
+
+.hero:has(.hero__info .hero__description + .cta) .hero__info {
+  padding-top: 6.25rem;
+}
+
+.hero:has(.hero__info .hero__description + .cta) .link-more {
+  margin-top: auto;
+}
+
 .hero .container {
   display: flex;
   align-items: center;
@@ -648,6 +667,14 @@ section {
 .hero .container * {
   position: relative;
   z-index: 2;
+}
+
+.hero .cta {
+  padding: 1.125rem 2.5rem;
+}
+
+.hero .link-more span {
+  transform: rotate(90deg);
 }
 
 .hero__info {
@@ -661,6 +688,18 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2.3125rem;
+}
+
+.hero__details:has(.hero__description + .cta) {
+  gap: 0;
+}
+
+.hero__details:has(.hero__description + .cta) .section-title {
+  margin-bottom: 1.25rem;
+}
+
+.hero__details:has(.hero__description + .cta) .hero__description {
+  margin-bottom: 2.75rem;
 }
 
 .hero__schedule {
@@ -703,6 +742,9 @@ section {
   max-width: 46.75rem;
   border-radius: 2.5rem;
   overflow: hidden;
+}
+
+.hero__pic--filtered {
   mix-blend-mode: hard-light;
 }
 
@@ -761,6 +803,7 @@ section {
   height: 39.3125rem;
   -o-object-fit: cover;
   object-fit: cover;
+  z-index: -1;
 }
 
 .entertainment__text {
@@ -897,7 +940,7 @@ section {
 .faq__deco {
   pointer-events: none;
   top: 8.125rem;
-  right: -rem(120px);
+  right: -7.5rem;
   z-index: -1;
   position: absolute;
   max-width: 23.625rem;
@@ -1057,6 +1100,60 @@ section {
   font: 400 1.875rem/100% "Veruna", sans-serif;
   text-transform: uppercase;
   letter-spacing: -1px;
+}
+
+.road {
+  padding-block: 2.375rem 4.6875rem;
+  position: relative;
+}
+
+.road__cards {
+  padding-block: 5.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  max-width: 87.1875rem;
+}
+
+.road__pic {
+  position: absolute;
+  right: 2.625rem;
+  top: 2.375rem;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.photos {
+  padding-block: 4.6875rem 3.125rem;
+}
+
+.photos__cards {
+  padding-inline: 1.9375rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 20.75rem;
+  gap: 1.25rem;
+}
+
+.photos__card {
+  height: 100%;
+  grid-column: span 1;
+}
+
+.photos__card:nth-child(7n+1),
+.photos__card:nth-child(7n+3) {
+  grid-row: span 2;
+}
+
+.photos__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.photos .section-heading {
+  margin-bottom: 2.5rem;
 }
 
 .assortment-box {
@@ -1405,6 +1502,73 @@ section {
   color: rgba(255, 255, 255, 0.6980392157);
 }
 
+.road-box {
+  padding-bottom: 3.125rem;
+  display: flex;
+  align-items: flex-start;
+  counter-increment: road;
+  gap: 7.3125rem;
+  border-bottom: 1px solid #cccab6;
+}
+
+.road-box::after {
+  order: 2;
+  content: counter(road, decimal-leading-zero);
+  font: 400 2.625rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+  opacity: 0.4;
+  color: #000;
+}
+
+.road-box__pic {
+  max-width: 30.8125rem;
+  width: 100%;
+  order: 1;
+  aspect-ratio: 493/332;
+  display: flex;
+  align-items: flex-start;
+}
+
+.road-box__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.road-box__title {
+  font: 400 2.625rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+}
+
+.road-box__title span {
+  color: #56ae47;
+}
+
+.road-box__info {
+  max-width: 38.875rem;
+  width: 100%;
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+
+.road-box__details {
+  font: 300 0.8125rem/160% "e-Ukraine", sans-serif;
+  color: #4a4a4a;
+}
+
+.road-box__details *:last-child {
+  margin-bottom: 0;
+}
+
+.road-box__details p,
+.road-box__details ul,
+.road-box__details ol {
+  margin: 0 0 1.5rem 0;
+}
+
 .reserve-form {
   max-width: 35.125rem;
 }
@@ -1434,6 +1598,7 @@ section {
 
 .reserve-form .cta {
   gap: 0.625rem;
+  width: 100%;
 }
 
 .reserve-form .cta svg {
