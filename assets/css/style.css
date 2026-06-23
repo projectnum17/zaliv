@@ -1156,6 +1156,24 @@ section {
   margin-bottom: 2.5rem;
 }
 
+.promo {
+  padding-block: 2.1875rem 10.625rem;
+}
+
+.promo__boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.promo__empty {
+  grid-column: span 2;
+  text-align: center;
+  font: 400 1.875rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
 .assortment-box {
   min-width: 26.5625rem;
   display: flex;
