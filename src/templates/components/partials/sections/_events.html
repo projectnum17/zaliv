@@ -7,7 +7,7 @@
         <div class="events__root js-events-root">
             <div class="events__cards swiper">
                 <div class="events__wrapper swiper-wrapper">
-                    {{#each events.promo}}
+                    {{#each (sliceCollect events.promo 0 2)}}
                         <div class="events__slide swiper-slide">
                             {{> _eventBox this}}
                         </div>

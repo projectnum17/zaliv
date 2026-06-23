@@ -2,7 +2,16 @@
 layout: default
 pageName: Types
 pageDescription: Types
+filterButtons: [
+    { text: "Їж", active: false },
+    { text: "Релаксуй", active: false },
+    { text: "Активно відпочивай", active: true },
+    { text: "Поєднуйся з природою", active: false },
+    { text: "Святкуй", active: false }
+]
 ---
-{{> _intro}}
+{{> _intro
+    title = 'Відпочинок <br> <span>на будь-який смак</span>'
+}}
 {{> _leisure}}
 {{> _entice}}

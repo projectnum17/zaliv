@@ -1,9 +1,9 @@
-<section class="leisure">
+<section class="promo">
     <div class="container">
         {{> _filterPanel buttons = filterButtons}}
-        <div class="leisure__boxes">
-            {{#each leisure.leisure}}
-                {{> _leisureBox this}}
+        <div class="promo__boxes">
+            {{#each events.promo}}
+                {{> _eventBox this}}
             {{/each}}
             <p class="leisure__empty" style="display: none;">Наразі, немає доступних івентів</p>
         </div>
