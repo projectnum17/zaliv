@@ -1174,6 +1174,110 @@ section {
   letter-spacing: -1px;
 }
 
+.article {
+  padding-block: 6.25rem 10.625rem;
+  position: relative;
+}
+
+.article .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 76.375rem;
+  gap: 1.5rem;
+}
+
+.article__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.article__thumb {
+  position: absolute;
+  top: 5.0625rem;
+  right: 0;
+  max-width: 17.75rem;
+}
+
+.article__thumb img {
+  width: 100%;
+}
+
+.article__pic {
+  aspect-ratio: 546/666;
+  max-width: 34.125rem;
+  width: 100%;
+}
+
+.article__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.article__content {
+  max-width: 37.25rem;
+}
+
+.article__date {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.625rem;
+}
+
+.article__date span {
+  font: 400 2.625rem/100% "Veruna", sans-serif;
+  text-transform: uppercase;
+  color: #56ae47;
+}
+
+.article__date p {
+  font: 300 0.875rem/140% "e-Ukraine", sans-serif;
+}
+
+.article__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9375rem;
+  color: #4a4a4a;
+}
+
+.article__details * {
+  margin: 0;
+}
+
+.article__details p {
+  font: 300 0.875rem/160% "e-Ukraine", sans-serif;
+}
+
+.article__details ul li,
+.article__details ol li {
+  font: 300 0.875rem/160% "e-Ukraine", sans-serif;
+}
+
+.article__details h2 {
+  font: 400 3.25rem/100% "Veruna", sans-serif;
+}
+
+.article__details h3 {
+  font: 400 2.625rem/100% "Veruna", sans-serif;
+}
+
+.article__details h4 {
+  font: 400 1.875rem/100% "Veruna", sans-serif;
+}
+
+.article__details h5,
+.article__details h6 {
+  font: 400 1.5rem/100% "Veruna", sans-serif;
+}
+
 .assortment-box {
   min-width: 26.5625rem;
   display: flex;
