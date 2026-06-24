@@ -2,6 +2,10 @@
 @use '../../../base/mixins' as *;
 @use '../../../base/media' as *;
 
+section.plan:last-child {
+    margin-bottom: rem(100px);
+}
+
 .plan {
     padding-top: rem(130px);
 

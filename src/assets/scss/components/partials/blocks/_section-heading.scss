@@ -15,10 +15,22 @@
         }
     }
 
+    &:has(.section-heading__pic) {
+        position: relative;
+    }
+
     &:has(.link-more) {
         .section-subtitle {
             margin-bottom: rem(15px);
         }
+    }
+
+    &__pic {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100px;
+        max-width: rem(185px);
     }
 
     &--lg {
