@@ -1,0 +1,28 @@
+<section class="details">
+    <div class="container">
+        <div class="details__head">
+            {{> _sectionHeading
+                title = 'Трохи <span>деталей:</span>'
+                decoration = 1
+            }}
+            <div class="details__info">
+                <div class="details__txts">
+                    <p>
+                        В будівництві стін наших котеджів використані виключно природні українські матеріали: деревина, солома, глина і пісок.
+                    </p>
+                    <p>
+                        Це перший в Україні завершений проект, виконаний за унікальною технологією 100% автономії та енергонезалежності (власне твердопаливне опалення, електрогенерація та водопостачання).
+                    </p>
+                </div>
+                {{> _linkMore
+                    url = 'javascript: void(0)'
+                    label ='Правила перебування'
+                }}
+            </div>
+            <div class="details__pic">
+                <img src="./assets/images/rabit.svg" alt="Picture">
+            </div>
+        </div>
+    </div>
+    {{> _roomGallery}}
+</section>

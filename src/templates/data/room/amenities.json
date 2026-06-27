@@ -1,0 +1,52 @@
+{
+    "amenities": [
+        {
+            "icon": "./assets/images/icons/amenities_1.svg",
+            "title": "Двоспальне ліжко"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_2.svg",
+            "title": "Міні-кухня"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_3.svg",
+            "title": "Міні сейф"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_4.svg",
+            "title": "Диван з можливістю розкласти"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_5.svg",
+            "title": "Чай та кава"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_6.svg",
+            "title": "Питна вода (дві пляшки 0,5 на добу)."
+        },
+        {
+            "icon": "./assets/images/icons/amenities_7.svg",
+            "title": "Телевізор"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_8.svg",
+            "title": "Міні-холодильник"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_9.svg",
+            "title": "Кондиціонер"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_10.svg",
+            "title": "Електрокамін"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_11.svg",
+            "title": "Безкоштовний WiFi"
+        },
+        {
+            "icon": "./assets/images/icons/amenities_12.svg",
+            "title": "Приватна парковка"
+        }
+    ]
+}

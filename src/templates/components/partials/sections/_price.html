@@ -1,0 +1,22 @@
+<section class="price">
+    <div class="container">
+        {{> _sectionHeading
+            title = '<span>Що входить</span> у вартість проживання?'
+            decoration = 1
+        }}
+        <div class="price__box">
+            <div class="price__preview">
+                <img src="./assets/images/price.jpg" alt="Picture">
+            </div>
+            <ul class="price__list">
+                {{#each amenities.amenities}}
+                <li>
+                    <img src="{{ icon }}" alt="Icon">
+                    {{ title }}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <img src="./assets/images/icons/logo-text.svg" alt="" class="bg-text">
+    </div>
+</section>

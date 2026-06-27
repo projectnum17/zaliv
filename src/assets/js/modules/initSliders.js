@@ -1,5 +1,10 @@
 export const initSliders = () => {
-    const simpleSlider = (rootSelector, slidesCount = 4, slidesGap = 20) => {
+    const simpleSlider = (
+        rootSelector,
+        slidesCount = 4,
+        slidesGap = 20,
+        config = {},
+    ) => {
         if (typeof Swiper === 'undefined') return;
 
         const root = document.querySelector(rootSelector);
@@ -16,10 +21,14 @@ export const initSliders = () => {
                 prevEl: prevBtn,
                 nextEl: nextBtn,
             },
+            ...config,
         });
     };
 
     simpleSlider('.js-relax-root');
     simpleSlider('.js-fun-root');
     simpleSlider('.js-events-root', 2, 32);
+    simpleSlider('.js-room-root', 1.63, 60, {
+        centeredSlides: true,
+    });
 };

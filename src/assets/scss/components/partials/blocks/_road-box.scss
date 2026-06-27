@@ -60,6 +60,12 @@
         ul,
         ol {
             margin: 0 0 rem(24px) 0;
+
+            span,
+            a {
+                text-decoration: underline;
+                color: $c_accent;
+            }
         }
     }
 }

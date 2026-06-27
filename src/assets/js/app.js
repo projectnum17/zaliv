@@ -5,6 +5,7 @@ import { initForms } from './modules/initForms';
 import { initAssortmentBox } from './modules/initAssortmentBox';
 import { initSliders } from './modules/initSliders';
 import { initFaqBox } from './modules/initFaqBox';
+import { initTabs } from './modules/initTabs';
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initAssortmentBox();
     initSliders();
     initFaqBox();
+    initTabs();
 });

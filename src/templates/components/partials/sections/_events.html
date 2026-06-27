@@ -1,17 +1,25 @@
 <section class="events">
     <div class="container">
         {{> _sectionHeading
-            title = '<span>Акції</span> та події'
+            title = title
             link = 1
         }}
         <div class="events__root js-events-root">
             <div class="events__cards swiper">
                 <div class="events__wrapper swiper-wrapper">
-                    {{#each (sliceCollect events.promo 0 2)}}
-                        <div class="events__slide swiper-slide">
-                            {{> _eventBox this}}
-                        </div>
-                    {{/each}}
+                    {{#if shortList}}
+                        {{#each (sliceCollect events.promo 0 2)}}
+                            <div class="events__slide swiper-slide">
+                                {{> _eventBox this}}
+                            </div>
+                        {{/each}}
+                    {{else}}
+                        {{#each  events.promo}}
+                            <div class="events__slide swiper-slide">
+                                {{> _eventBox this}}
+                            </div>
+                        {{/each}}
+                    {{/if}}
                 </div>
             </div>
             {{> _navigationPanel}}

@@ -46,13 +46,6 @@
         gap: rem(30px);
     }
 
-    &__deco {
-        max-width: rem(62px);
-        img {
-            width: 100%;
-        }
-    }
-
     &__offer {
         display: flex;
         gap: rem(12px);
@@ -102,6 +95,11 @@
             li {
                 font: 300 #{rem(14px)} / 160% $ff;
                 color: #ffffff80;
+                span,
+                a {
+                    text-decoration: underline;
+                    color: $c_accent;
+                }
             }
         }
         *:last-child {

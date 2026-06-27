@@ -45,6 +45,7 @@
     &__call {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: rem(8px);
         margin-bottom: rem(75px);
 
@@ -54,17 +55,10 @@
             margin: 0;
             color: #ffffff99;
         }
+    }
 
-        a {
-            font: 500 #{rem(24px)} / 100% $ff;
-            @include transitions(
-                0.3s,
-                cubic-bezier(0.768, 0.304, 0.496, 0.884)
-            );
-            @include hover {
-                color: $c_accent;
-            }
-        }
+    .phone-call {
+        font-size: rem(24px);
     }
 
     &__btns{

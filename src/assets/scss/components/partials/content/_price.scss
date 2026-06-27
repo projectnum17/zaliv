@@ -1,0 +1,58 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.price {
+    padding-block: rem(82px) rem(160px);
+
+    .section-heading {
+        margin: 0 auto;
+        max-width: rem(855px);
+        margin-bottom: rem(60px);
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__preview {
+        aspect-ratio: 759 / 708;
+        max-width: rem(759px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        max-width: rem(796px);
+        width: 100%;
+        transform: translateY(-50%);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(30px) rem(18px);
+        width: 100%;
+        padding: rem(60px) rem(80px);
+        font: 300 #{rem(14px)} / 160% $ff;
+        background: $c_accent_drk;
+        color: $c_white;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: rem(12px);
+
+            img {
+                width: rem(56px);
+                height: rem(56px);
+            }
+        }
+    }
+}

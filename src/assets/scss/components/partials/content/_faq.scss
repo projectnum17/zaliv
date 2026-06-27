@@ -4,15 +4,6 @@
 
 .faq {
     padding-block: rem(130px) rem(115px);
-    &__list {
-        max-width: rem(750px);
-        display: flex;
-        flex-direction: column;
-        gap: rem(30px);
-        padding-block: rem(30px);
-        border-top: 1px solid $c_light;
-        border-bottom: 1px solid $c_light;
-    }
 
     &__preview {
         max-width: rem(588px);
@@ -41,6 +32,7 @@
 
     .section-heading {
         align-items: flex-start;
+        text-align: left;
         margin-bottom: rem(24px);
 
         &__deco {

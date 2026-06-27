@@ -27,30 +27,81 @@
                 </div>
 
                 {{#if call}}
-                    {{> _linkMore
-                        url = 'tel:+380999879877'
-                        label ='+380 99 987 98 77'
-                        lg = 1
-                    }}
+                {{> _linkMore
+                    url = 'tel:+380999879877'
+                    label ='+380 99 987 98 77'
+                    lg = 1
+                }}
                 {{/if}}
 
                 {{#if cta}}
-                    <a href="javascript: void(0)" class="cta js-cta">Забронювати житло</a>
+                <a href="javascript: void(0)" class="cta js-cta">Забронювати житло</a>
                 {{/if}}
 
                 {{#if form}}
-                    {{> _reserveForm}}
+                {{> _reserveForm}}
                 {{/if}}
 
                 {{#if route}}
-                    <a href="#target" class="link-more">
-                        Дізнатися більше
-                        <span>
-                            <svg>
-                                <use href="./assets/images/icons/svg/sprite.svg#icoArrowR"></use>
-                            </svg>
-                        </span>
-                    </a>
+                <a href="#target" class="link-more">
+                    Дізнатися більше
+                    <span>
+                        <svg>
+                            <use href="./assets/images/icons/svg/sprite.svg#icoArrowR"></use>
+                        </svg>
+                    </span>
+                </a>
+                {{/if}}
+
+                {{#if roomInfo}}
+                <div class="room-info">
+                    <ul class="room-info__price">
+                        <li>
+                            <p class="room-info__title">Пн-Пт (доба)</p>
+                            <span>4 500 грн</span>
+                        </li>
+                        <li>
+                            <p class="room-info__title">Пт-Нд (Доба)</p>
+                            <span>5 500 грн</span>
+                        </li>
+                        <li>
+                            <p class="room-info__title">Додаткове місце</p>
+                            <span>500 грн</span>
+                        </li>
+                    </ul>
+                    <div class="room-info__reserve">
+                        <a href="javascript: void(0)" class="cta js-cta">Забронювати</a>
+                        <div class="room-info__connect">
+                            <p class="room-info__title">Бронювання житла</p>
+                            <a href="tel:+380999999999" class="phone-call">
+                                +38 (099) 999-99-99
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="room-info__terms">
+                        <li>
+                            <img src="./assets/images/icons/ico-users.svg" alt="Icon">
+                            <div>
+                                <p class="room-info__subtitle">Кількість гостей</p>
+                                <p class="room-info__val">2+1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/icons/ico-square.svg" alt="Icon">
+                            <div>
+                                <p class="room-info__subtitle">Площа</p>
+                                <p class="room-info__val">24 м.кв.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./assets/images/icons/ico-pet.svg" alt="Icon">
+                            <div>
+                                <p class="room-info__subtitle">Pets-friendly</p>
+                                <p class="room-info__val">+500 грн</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 {{/if}}
 
             </div>

@@ -21,11 +21,11 @@
         .assortment-box__details {
             grid-template-rows: 1fr;
         }
-        .assortment-box__deco,
+        .waves-ico,
         .assortment-box__title {
             margin-bottom: rem(23px);
         }
-        .assortment-box__deco,
+        .waves-ico,
         .assortment-box__details,
         .assortment-box__title span {
             opacity: 1;
@@ -109,17 +109,6 @@
         }
     }
 
-    &__deco {
-        max-width: rem(62px);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(#{rem(20px)});
-        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
-        img {
-            width: 100%;
-        }
-    }
-
     &__details {
         min-width: calc($card_width - calc($pdd_inline * 2));
         opacity: 0;
@@ -134,5 +123,12 @@
             overflow: hidden;
             margin: 0;
         }
+    }
+
+    .waves-ico {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(#{rem(20px)});
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     }
 }

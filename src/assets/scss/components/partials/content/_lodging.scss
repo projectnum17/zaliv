@@ -1,0 +1,98 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.lodging {
+    padding-block: rem(170px);
+
+    &__info {
+        max-width: rem(447px);
+        position: relative;
+    }
+
+    &__pic {
+        pointer-events: none;
+        bottom: rem(-139px);
+        left: rem(300px);
+        z-index: -1;
+        position: absolute;
+        max-width: rem(378px);
+    }
+
+    &__noninclude {
+        margin-bottom: rem(67px);
+        p {
+            font: 400 #{rem(24px)} / 110% $ff;
+            letter-spacing: -1px;
+            margin: 0 0 rem(15px) 0;
+            span {
+                color: $c_accent;
+            }
+        }
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+
+        ul,
+        ol {
+            display: flex;
+            flex-direction: column;
+            gap: rem(9px);
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+
+            li {
+                padding-left: rem(24px);
+                position: relative;
+                font: 300 #{rem(14px)} / 160% $ff;
+                span,
+                a {
+                    text-decoration: underline;
+                    color: $c_accent;
+                }
+
+                &::before {
+                    content: '';
+                    left: 0;
+                    top: rem(7px);
+                    position: absolute;
+                    width: rem(8px);
+                    height: rem(8px);
+                    background: $c_accent;
+                }
+            }
+        }
+    }
+
+    &__reserve {
+        display: flex;
+        flex-direction: column;
+        gap: rem(7px);
+        p {
+            font: 400 #{rem(14px)} / 100% $ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+            color: #00000080;
+        }
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: rem(37px);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(24px);
+    }
+
+    .cta {
+        margin-bottom: rem(36px);
+    }
+}

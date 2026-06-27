@@ -1,0 +1,44 @@
+@use '../../../base/var' as *;
+@use '../../../base/mixins' as *;
+@use '../../../base/media' as *;
+
+.details {
+    padding-block: rem(130px) rem(82px);
+
+    &__head {
+        margin-bottom: rem(50px);
+        display: flex;
+        justify-content: space-between;
+        gap: rem(24px);
+    }
+
+    &__pic {
+        max-width: rem(186px);
+        transform: scaleX(-1);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__txts {
+        margin-bottom: rem(37px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+        font: 300 #{rem(14px)} / 160% $ff;
+        color: #4A4A4A;
+        * {
+            margin: 0;
+        }
+    }
+
+    &__info {
+        max-width: rem(640px);
+    }
+
+    .section-heading {
+        text-align: left;
+        max-width: rem(348px);
+        align-items: flex-start;
+    }
+}

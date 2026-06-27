@@ -80,6 +80,11 @@
             li {
                 font: 400 #{rem(16px)} / 140% $ff;
                 color: #ffffffb2;
+                span,
+                a {
+                    text-decoration: underline;
+                    color: $c_accent;
+                }
             }
         }
     }

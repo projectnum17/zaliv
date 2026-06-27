@@ -19,17 +19,6 @@
             color: #1e2d1a99;
         }
 
-        &-link {
-            font: 500 #{rem(20px)} / 100% $ff;
-            @include transitions(
-                0.3s,
-                cubic-bezier(0.768, 0.304, 0.496, 0.884)
-            );
-            @include hover {
-                color: $c_accent;
-            }
-        }
-
         &-soc {
             display: flex;
             gap: rem(9px);

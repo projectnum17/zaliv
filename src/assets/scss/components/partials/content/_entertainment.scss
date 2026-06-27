@@ -21,16 +21,6 @@
         z-index: -1;
     }
 
-    &__text {
-        width: rem(1156px);
-        max-width: 95%;
-        position: absolute;
-        left: 50%;
-        top: rem(42px);
-        transform: translateX(-50%);
-        z-index: -1;
-    }
-
     .section-heading {
         max-width: rem(800px);
         margin: 0 auto rem(40px);
