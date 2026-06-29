@@ -4,11 +4,19 @@
 
 .reserve-form {
     max-width: rem(562px);
+    @include media('tablet') {
+        max-width: 100%;
+        width: 100%;
+    }
     form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(2px);
         width: 100%;
+        @include media('mobile') {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__title {

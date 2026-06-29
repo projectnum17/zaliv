@@ -2,6 +2,9 @@ export const initAssortmentBox = () => {
     const boxes = document.querySelectorAll('.js-assortment-box');
     if (!boxes.length) return;
 
+    const window = innerWidth < 768;
+    if (window) return;
+
     let currentAnimationId = null;
 
     function smoothScrollTo(container, target, duration = 500) {
@@ -18,7 +21,6 @@ export const initAssortmentBox = () => {
             const elapsed = time - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            // Функція easing (easeOutCubic)
             const ease = 1 - Math.pow(1 - progress, 3);
 
             const currentEnd =

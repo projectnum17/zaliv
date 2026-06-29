@@ -5,6 +5,13 @@
 .events {
     position: relative;
     padding-block: rem(187px) rem(127px);
+    @include media('laptop') {
+        padding-block: rem(96px);
+    }
+
+    @include media('mobile') {
+        padding-block: rem(56px) rem(28px);
+    }
 
     &__bg {
         position: absolute;
@@ -14,13 +21,38 @@
         object-fit: cover;
         z-index: -1;
         pointer-events: none;
+        @include media('mobile') {
+            display: none;
+        }
     }
 
     &__slide {
         height: auto;
     }
 
+    &__root {
+        &:has(.swiper-button-lock) {
+            @include media('tablet') {
+                .events__wrapper {
+                    flex-direction: column;
+                    gap: rem(15px);
+                }
+            }
+        }
+
+        &.is-sm {
+            @include media('tablet') {
+                .events__slide {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
     .section-heading {
         margin-bottom: rem(40px);
+        @include media('mobile') {
+            margin-bottom: rem(25px);
+        }
     }
 }

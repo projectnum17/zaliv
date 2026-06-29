@@ -19,5 +19,10 @@
         .assortment-box {
             scroll-snap-align: start;
         }
+
+        @include media('mobile') {
+            flex-direction: column;
+            overflow: hidden;
+        }
     }
 }

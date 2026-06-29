@@ -6,6 +6,7 @@
     height: 100%;
     display: flex;
     color: $c_white;
+
     @include hover {
         .event-box__pic img {
             transform: scale(1.15);
@@ -20,14 +21,25 @@
         }
     }
 
+    @include media('mobile') {
+        flex-direction: column;
+    }
+
     &__pic,
     &__details {
         width: 50%;
+        @include media('mobile') {
+            width: 100%;
+        }
     }
 
     &__pic {
         overflow: hidden;
         aspect-ratio: 348 / 354;
+
+        @include media('mobile') {
+            aspect-ratio: 335 / 342;
+        }
 
         img {
             width: 100%;
@@ -44,18 +56,29 @@
         display: flex;
         flex-direction: column;
         gap: rem(30px);
+        @include media('mobile') {
+            gap: rem(15px);
+        }
     }
 
     &__offer {
         display: flex;
         gap: rem(12px);
+
         span {
             font: 400 #{rem(42px)} / 100% $ff_accent;
             text-transform: uppercase;
             color: $c_accent;
+            @include media('mobile') {
+                font-size: rem(30px);
+            }
         }
+
         p {
             font: 300 #{rem(14px)} / 140% $ff;
+            @include media('mobile') {
+                font-size: rem(12px);
+            }
         }
     }
 
@@ -63,9 +86,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: rem(12px);
+        gap: rem(24px);
         padding: rem(30px);
         background: $c_accent_drk;
+        @include media('mobile') {
+            padding: rem(20px);
+        }
     }
 
     &__info {
@@ -82,10 +108,16 @@
                 0.5s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+            @include media('mobile') {
+                font-size: rem(20px);
+            }
         }
         p {
             font: 300 #{rem(14px)} / 160% $ff;
             color: #ffffff80;
+            @include media('mobile') {
+                font-size: rem(12px);
+            }
         }
 
         ul,

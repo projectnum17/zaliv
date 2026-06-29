@@ -27,95 +27,89 @@
                 </a>
             </div>
             <div class="footer-nav">
-                <div class="footer-nav__col">
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ active.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each active.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ active.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each active.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
                         {{/each}}
-                    </div>
+                    </ul>
+                    {{/each}}
                 </div>
-                <div class="footer-nav__col">
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ relax.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each relax.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ relax.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each relax.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
                         {{/each}}
-                    </div>
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ eating.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each eating.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        {{/each}}
-                    </div>
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ lives.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each lives.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        {{/each}}
-                    </div>
+                    </ul>
+                    {{/each}}
                 </div>
-                <div class="footer-nav__col">
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ holidays.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each holidays.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ eating.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each eating.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
                         {{/each}}
-                    </div>
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ child.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each child.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
+                    </ul>
+                    {{/each}}
+                </div>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ lives.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each lives.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
                         {{/each}}
-                    </div>
-                    <div class="footer-nav__box">
-                        {{#each navigation.footer}}
-                            <p class="footer-nav__title">{{ faq.heading }}</p>
-                            <ul class="footer-nav__list">
-                                {{#each faq.menu}}
-                                <li>
-                                    <a href="javascript: void(0)">{{ title }}</a>
-                                </li>
-                                {{/each}}
-                            </ul>
+                    </ul>
+                    {{/each}}
+                </div>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ holidays.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each holidays.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
                         {{/each}}
-                    </div>
+                    </ul>
+                    {{/each}}
+                </div>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ child.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each child.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </div>
+                <div class="footer-nav__box">
+                    {{#each navigation.footer}}
+                    <p class="footer-nav__title">{{ faq.heading }}</p>
+                    <ul class="footer-nav__list">
+                        {{#each faq.menu}}
+                        <li>
+                            <a href="javascript: void(0)">{{ title }}</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
                 </div>
             </div>
         </div>

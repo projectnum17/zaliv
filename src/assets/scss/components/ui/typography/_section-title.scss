@@ -9,4 +9,15 @@
     span {
         color: $c_accent;
     }
+
+    @include media('laptop') {
+        font-size: rem(68px);
+    }
+    @include media('tablet') {
+        font-size: rem(56px);
+    }
+    @include media('mobile') {
+        font-size: rem(44px);
+        line-height: 100%;
+    }
 }

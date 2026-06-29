@@ -1,10 +1,12 @@
 @use '../../base/var' as *;
 @use '../../base/mixins' as *;
-@use '../../base/media' as *; 
-
+@use '../../base/media' as *;
 
 .waves-ico {
     max-width: rem(62px);
+    @include media('mobile') {
+        max-width: rem(43px);
+    }
 
     img {
         width: 100%;

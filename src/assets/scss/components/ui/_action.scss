@@ -5,6 +5,7 @@
 .action {
     font: 400 #{rem(13px)} / 100% $ff;
     text-transform: uppercase;
+    justify-content: center;
     padding: rem(20px) rem(67px);
     color: $c_white;
     border: 1px solid $c_white;
@@ -12,5 +13,9 @@
     @include hover {
         color: $c_accent_drk;
         background: $c_white;
+    }
+    @include media('mobile') {
+        font-size: rem(12px);
+        padding: rem(18px);
     }
 }

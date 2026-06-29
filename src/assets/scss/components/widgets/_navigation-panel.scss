@@ -9,6 +9,11 @@
     gap: rem(20px);
     justify-content: center;
 
+    @include media('mobile') {
+        padding-top: rem(25px);
+        gap: rem(10px);
+    }
+
     &:has(.swiper-button-lock) {
         display: none;
     }
@@ -28,6 +33,11 @@
             background: #1e2d1a;
         }
 
+        @include media('mobile') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+
         &.swiper-button-disabled {
             pointer-events: none;
             background: #cccab6;
@@ -40,6 +50,11 @@
                 0.3s,
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
+
+            @include media('mobile') {
+                width: rem(19px);
+                height: rem(19px);
+            }
         }
 
         &:first-child {

@@ -11,12 +11,21 @@ div:has(> .faq-box) {
     padding-block: rem(30px);
     border-top: 1px solid $c_light;
     border-bottom: 1px solid $c_light;
+    @include media('mobile') {
+        max-width: 100%;
+        width: 100%;
+        padding-block: rem(20px);
+        gap: rem(20px);
+    }
 }
 
 .faq-box {
     &:not(:last-child) {
         padding-bottom: rem(30px);
         border-bottom: 1px solid $c_light;
+        @include media('mobile') {
+            padding-bottom: rem(20px);
+        }
     }
 
     &:has(.is-open) {
@@ -32,11 +41,15 @@ div:has(> .faq-box) {
         .faq-box__answer {
             margin-top: rem(15px);
             grid-template-rows: 1fr;
+            @include media('mobile') {
+                margin-top: rem(10px);
+            }
         }
     }
 
     .room-info {
         &__price {
+            flex-wrap: wrap;
             margin-bottom: 0;
             max-width: 100%;
             justify-content: flex-start;
@@ -61,6 +74,7 @@ div:has(> .faq-box) {
     }
 
     &__question {
+        text-align: left;
         font: 400 #{rem(24px)} / 110% $ff_accent;
         text-transform: uppercase;
         letter-spacing: -1px;
@@ -70,6 +84,10 @@ div:has(> .faq-box) {
         justify-content: space-between;
         gap: rem(12px);
         color: #000;
+        @include media('mobile') {
+            font-size: rem(20px);
+            gap: rem(20px);
+        }
 
         p {
             margin: 0;
@@ -91,6 +109,11 @@ div:has(> .faq-box) {
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
 
+            @include media('mobile') {
+                width: rem(24px);
+                height: rem(24px);
+            }
+
             &::after,
             &::before {
                 content: '';
@@ -105,6 +128,9 @@ div:has(> .faq-box) {
                     0.5s,
                     cubic-bezier(0.768, 0.304, 0.496, 0.884)
                 );
+                @include media('mobile') {
+                    width: rem(12px);
+                }
             }
 
             &::before {
@@ -119,10 +145,16 @@ div:has(> .faq-box) {
         font: 300 #{rem(16px)} / 160% $ff;
         color: #00000080;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('mobile') {
+            font-size: rem(14px);
+        }
 
         & > div {
             max-width: rem(700px);
             overflow: hidden;
+            @include media('mobile') {
+                max-width: 95%;
+            }
         }
     }
 }

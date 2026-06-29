@@ -8,4 +8,14 @@
     span {
         color: $c_accent;
     }
+
+    @include media('laptop') {
+        font-size: rem(56px);
+    }
+    @include media('tablet') {
+        font-size: rem(42px);
+    }
+    @include media('mobile') {
+        font-size: rem(36px);
+    }
 }

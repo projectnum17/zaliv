@@ -6,6 +6,7 @@ import { initAssortmentBox } from './modules/initAssortmentBox';
 import { initSliders } from './modules/initSliders';
 import { initFaqBox } from './modules/initFaqBox';
 import { initTabs } from './modules/initTabs';
+import { initPortalBlock } from './modules/initPortalBlock';
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSliders();
     initFaqBox();
     initTabs();
+    initPortalBlock('.hero .reserve-form', '.hero .container', 991);
 });

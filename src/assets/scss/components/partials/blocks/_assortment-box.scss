@@ -15,6 +15,18 @@
     width: 100%;
     color: $c_white;
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include media('laptop') {
+        min-width: rem(375px);
+        $card_width: #{rem(375px)};
+    }
+    @include media('tablet') {
+        height: rem(550px);
+    }
+
+    @include media('mobile') {
+        height: rem(260px);
+        min-width: auto;
+    }
 
     @include hover {
         min-width: $card_width;
@@ -24,6 +36,10 @@
         .waves-ico,
         .assortment-box__title {
             margin-bottom: rem(23px);
+
+            @include media('mobile') {
+                margin-bottom: 0;
+            }
         }
         .waves-ico,
         .assortment-box__details,
@@ -36,6 +52,7 @@
 
     &::after {
         content: '';
+        pointer-events: none;
         inset: 0;
         position: absolute;
         background: linear-gradient(
@@ -61,6 +78,10 @@
         left: rem(20px);
         padding: rem(4px) rem(15px);
         background: $c_accent;
+        @include media('mobile') {
+            font-size: rem(16px);
+            padding: rem(4px) rem(10px);
+        }
     }
 
     &__info {
@@ -70,6 +91,14 @@
         position: absolute;
         padding: rem(35px) $pdd_inline;
         bottom: 0;
+        @include media('laptop') {
+            padding: rem(24px);
+        }
+
+        @include media('mobile') {
+            width: 100%;
+            padding: rem(25px) rem(20px);
+        }
     }
 
     &__title {
@@ -78,7 +107,16 @@
         gap: rem(12px);
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
+        @include media('tablet') {
+            margin-bottom: rem(23px);
+        }
+
+        @include media('mobile') {
+            margin-bottom: 0;
+        }
+
         span {
+            flex-shrink: 0;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -94,6 +132,18 @@
                 cubic-bezier(0.768, 0.304, 0.496, 0.884)
             );
 
+            @include media('tablet') {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            @include media('mobile') {
+                opacity: 0;
+                visibility: hidden;
+                width: rem(24px);
+                height: rem(24px);
+            }
+
             svg {
                 margin-left: rem(2px);
                 width: rem(13px);
@@ -106,6 +156,9 @@
             text-transform: uppercase;
             letter-spacing: -1px;
             margin: 0;
+            @include media('mobile') {
+                font-size: rem(22px);
+            }
         }
     }
 
@@ -119,9 +172,29 @@
         font: 400 #{rem(16px)} / 140% $ff;
         color: #ffffffb2;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        @include media('mobile') {
+            display: none;
+        }
+
         p {
             overflow: hidden;
             margin: 0;
+
+            @include media('tablet') {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+
+        @include media('tablet') {
+            grid-template-rows: 1fr;
+            transform: translate(0);
+            opacity: 1;
+            visibility: visible;
+            min-width: auto;
         }
     }
 
@@ -130,5 +203,8 @@
         visibility: hidden;
         transform: translateY(#{rem(20px)});
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        @include media('tablet') {
+            display: none;
+        }
     }
 }

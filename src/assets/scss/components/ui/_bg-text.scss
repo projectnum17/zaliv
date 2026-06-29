@@ -14,4 +14,8 @@ section:has(.bg-text) {
     top: rem(42px);
     transform: translateX(-50%);
     z-index: -1;
+
+    @include media('mobile') {
+        max-width: rem(336px);
+    }
 }

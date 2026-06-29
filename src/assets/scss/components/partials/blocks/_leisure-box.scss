@@ -9,6 +9,10 @@
     aspect-ratio: 720 / 587;
     color: $c_white;
 
+    @include media('mobile') {
+        aspect-ratio: 335 / 273;
+    }
+
     @include hover {
         .leisure-box__preview {
             img {
@@ -49,15 +53,7 @@
         }
     }
 
-    &__info {
-        position: absolute;
-        bottom: 0;
-        padding: rem(30px) rem(35px);
-        display: flex;
-        flex-direction: column;
-        gap: rem(15px);
-        z-index: 2;
-
+    &__txts {
         h2,
         h3,
         h4,
@@ -67,6 +63,12 @@
             text-transform: uppercase;
             letter-spacing: -1px;
             margin: 0;
+            @include media('tablet') {
+                font-size: rem(26px);
+            }
+            @include media('mobile') {
+                font-size: rem(22px);
+            }
         }
 
         p {
@@ -86,6 +88,21 @@
                     color: $c_accent;
                 }
             }
+        }
+    }
+
+    &__info {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: rem(30px) rem(35px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+        z-index: 2;
+        @include media('tablet') {
+            padding: rem(20px);
+            gap: rem(10px);
         }
     }
 }

@@ -16,4 +16,9 @@
     @include hover {
         background: #407a35;
     }
+    @include media('mobile') {
+        width: 100%;
+        font-size: rem(12px);
+        padding: rem(19px);
+    }
 }

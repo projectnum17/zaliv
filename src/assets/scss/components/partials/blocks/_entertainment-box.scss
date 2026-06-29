@@ -41,10 +41,17 @@
     }
 
     &__info {
+        width: 100%;
         position: absolute;
         bottom: 0;
         z-index: 2;
         padding: rem(30px) rem(35px);
+        @include media('laptop') {
+            padding: rem(24px) rem(12px);
+        }
+        @include media('mobile') {
+            padding: rem(20px);
+        }
     }
 
     &__title {
@@ -52,6 +59,10 @@
         text-transform: uppercase;
         letter-spacing: -2px;
         margin-bottom: rem(15px);
+        @include media('mobile') {
+            font-size: rem(22px);
+            margin-bottom: rem(10px);
+        }
     }
 
     &__details {
@@ -63,6 +74,11 @@
         font: 400 #{rem(16px)} / 140% $ff;
         color: #ffffffb2;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        @include media('tablet') {
+            display: none;
+        }
+
         p {
             margin: 0;
             overflow: hidden;

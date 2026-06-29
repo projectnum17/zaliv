@@ -10,6 +10,9 @@
 
     .waves-ico {
         margin-bottom: rem(40px);
+        @include media('mobile') {
+            margin-bottom: rem(30px);
+        }
     }
 
     &:has(.section-heading__pic) {
@@ -23,10 +26,18 @@
     }
 
     &__pic {
+        overflow: hidden;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         right: 100px;
         max-width: rem(185px);
+        @include media('mobile') {
+            max-width: rem(110px);
+            right: rem(27px);
+            bottom: rem(6px);
+            top: auto;
+            transform: translate(0);
+        }
     }
 }

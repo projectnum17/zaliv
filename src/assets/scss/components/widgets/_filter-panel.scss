@@ -2,20 +2,39 @@
 @use '../../base/mixins' as *;
 @use '../../base/media' as *;
 
+div:has(> .filter-panel) {
+    display: flex;
+    justify-content: center;
+}
+
 .filter-panel {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-bottom: rem(40px);
     gap: rem(40px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include media('mobile') {
+        margin-bottom: rem(20px);
+        gap: rem(20px);
+    }
 
     &__btn {
+        flex-shrink: 0;
         font: 400 #{rem(13px)} / 100% $ff;
         text-transform: uppercase;
         position: relative;
         @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include hover {
             color: $c_accent;
+        }
+        @include media('mobile') {
+            font-size: rem(12px);
         }
 
         &.is-active {

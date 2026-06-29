@@ -1,9 +1,7 @@
 export const initSliders = () => {
     const simpleSlider = (
         rootSelector,
-        slidesCount = 4,
-        slidesGap = 20,
-        config = {},
+        { slidesPerView = 4, spaceBetween = 20, ...config } = {},
     ) => {
         if (typeof Swiper === 'undefined') return;
 
@@ -14,8 +12,8 @@ export const initSliders = () => {
         const nextBtn = root.querySelector('.js-slider-next');
 
         new Swiper(root.querySelector('.swiper'), {
-            slidesPerView: slidesCount,
-            spaceBetween: slidesGap,
+            slidesPerView: slidesPerView,
+            spaceBetween: spaceBetween,
             speed: 900,
             navigation: {
                 prevEl: prevBtn,
@@ -25,10 +23,55 @@ export const initSliders = () => {
         });
     };
 
-    simpleSlider('.js-relax-root');
-    simpleSlider('.js-fun-root');
-    simpleSlider('.js-events-root', 2, 32);
-    simpleSlider('.js-room-root', 1.63, 60, {
+    const eventsRoot = document.querySelector('.js-events-root');
+
+    if (eventsRoot) {
+        const slides = eventsRoot.querySelectorAll('.swiper-slide');
+
+        if (slides.length <= 2) {
+            eventsRoot.classList.add('is-sm');
+        }
+    }
+
+    simpleSlider('.js-relax-root', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        breakpoints: {
+            992: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
+    simpleSlider('.js-fun-root', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        breakpoints: {
+            992: {
+                slidesPerView: 2,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+        },
+    });
+
+    simpleSlider('.js-events-root', {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        breakpoints: {
+            992: {
+                spaceBetween: 32,
+            },
+        },
+    });
+
+    simpleSlider('.js-room-root', {
+        slidesPerView: 1.63,
+        spaceBetween: 60,
         centeredSlides: true,
     });
 };
