@@ -4,6 +4,10 @@
 
 .photos {
     padding-block: rem(75px) rem(50px);
+    overflow: hidden;
+    @include media('mobile') {
+        padding-block: rem(28px) rem(20px);
+    }
 
     &__cards {
         padding-inline: rem(31px);
@@ -11,6 +15,30 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: rem(332px);
         gap: rem(20px);
+
+        @include media('laptop') {
+            padding: 0;
+            grid-auto-rows: rem(250px);
+        }
+
+        @include media('tablet') {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(12px);
+            grid-auto-rows: rem(200px);
+        }
+
+        &.mobile--hidden {
+            @include media('mobile') {
+                display: none;
+            }
+        }
+
+        &.mobile--visible {
+            display: none;
+            @include media('mobile') {
+                display: block;
+            }
+        }
     }
 
     &__card {
@@ -21,6 +49,11 @@
             grid-row: span 2;
         }
 
+        @include media('mobile') {
+            aspect-ratio: 335 / 348;
+            max-width: rem(335px);
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -28,7 +61,18 @@
         }
     }
 
+    &__slide {
+        width: auto;
+    }
+
+    &__slider {
+        overflow: visible;
+    }
+
     .section-heading {
         margin-bottom: rem(40px);
+        @include media('mobile') {
+            margin-bottom: rem(25px);
+        }
     }
 }

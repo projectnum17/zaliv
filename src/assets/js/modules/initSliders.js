@@ -74,4 +74,16 @@ export const initSliders = () => {
         spaceBetween: 60,
         centeredSlides: true,
     });
+
+    const initPhotosGallery = () => {
+        const window = innerWidth < 768;
+        if (!window) return;
+
+        simpleSlider('.js-photos-root', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+        });
+    };
+
+    initPhotosGallery();
 };

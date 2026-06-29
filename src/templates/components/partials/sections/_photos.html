@@ -1,10 +1,10 @@
 <section class="photos">
     <div class="container">
-         {{> _sectionHeading
-            title = 'Більше <span>деталей</span> на фото'
-            decoration = 1
+        {{> _sectionHeading
+        title = 'Більше <span>деталей</span> на фото'
+        decoration = 1
         }}
-        <div class="photos__cards">
+        <div class="photos__cards mobile--hidden">
             <div class="photos__card">
                 <img loading="lazy" decoding="async" src="./assets/images/photo_1.jpg" alt="Picture">
             </div>
@@ -26,6 +26,48 @@
             <div class="photos__card">
                 <img loading="lazy" decoding="async" src="./assets/images/photo_7.jpg" alt="Picture">
             </div>
+        </div>
+        <div class="photos__cards js-photos-root mobile--visible">
+            <div class="photos__slider swiper">
+                <div class="photos__wrapper swiper-wrapper">
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_1.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_2.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_3.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_4.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_5.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_6.jpg" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="photos__slide swiper-slide">
+                        <div class="photos__card">
+                            <img loading="lazy" decoding="async" src="./assets/images/photo_7.jpg" alt="Picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> _navigationPanel}}
         </div>
     </div>
 </section>

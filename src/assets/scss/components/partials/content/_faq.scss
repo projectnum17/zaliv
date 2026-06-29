@@ -9,7 +9,7 @@
         padding-block: rem(80px);
     }
     @include media('mobile') {
-        padding-block: rem(28px) rem(56px);
+        padding-block: rem(56px);
     }
 
     &__preview {
