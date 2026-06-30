@@ -11,12 +11,21 @@
         justify-content: space-between;
         gap: rem(12px);
         align-items: flex-end;
+        @include media('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(35px);
+            margin-bottom: rem(30px);
+        }
 
         &-title {
             font: 400 #{rem(13px)} / 100% $ff;
             text-transform: uppercase;
             margin-bottom: rem(6px);
             color: #1e2d1a99;
+            @include media('mobile') {
+                font-size: rem(12px);
+            }
         }
 
         &-soc {
@@ -50,6 +59,9 @@
 
     &__map {
         aspect-ratio: 1460 / 563;
+        @include media('mobile') {
+            aspect-ratio: 335 / 416;
+        }
 
         img {
             width: 100%;
@@ -74,6 +86,20 @@
         padding: rem(50px) rem(40px);
         color: $c_white;
         background: $c_accent_drk;
+        @include media('desktop') {
+            left: rem(30px);
+            top: rem(30px);
+            bottom: rem(30px);
+        }
+        @include media('tablet') {
+            position: relative;
+            left: auto;
+            top: auto;
+            bottom: auto;
+            max-width: 92%;
+            margin: rem(-50px) auto 0;
+            padding: rem(30px) rem(20px);
+        }
 
         div {
             margin-top: auto;
@@ -84,6 +110,9 @@
             p {
                 font: 300 #{rem(14px)} / 160% $ff;
                 margin: 0;
+                @include media('mobile') {
+                    font-size: rem(12px);
+                }
             }
         }
     }
@@ -104,6 +133,10 @@
         margin-bottom: rem(12px);
         span {
             color: $c_accent;
+        }
+        @include media('mobile') {
+            font-size: rem(30px);
+            margin-bottom: rem(29px);
         }
     }
 }
