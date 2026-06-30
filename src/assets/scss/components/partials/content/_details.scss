@@ -5,16 +5,37 @@
 .details {
     padding-block: rem(130px) rem(82px);
 
+    @include media('mobile') {
+        padding-block: rem(60px) rem(30px);
+    }
+
     &__head {
         margin-bottom: rem(50px);
         display: flex;
         justify-content: space-between;
         gap: rem(24px);
+        @include media('laptop') {
+            flex-direction: column;
+            position: relative;
+        }
+        @include media('mobile') {
+            gap: rem(12px);
+            margin-bottom: rem(30px);
+        }
     }
 
     &__pic {
         max-width: rem(186px);
         transform: scaleX(-1);
+        @include media('laptop') {
+            position: absolute;
+            top: rem(-50px);
+            right: 0;
+        }
+
+        @include media('mobile') {
+            display: none;
+        }
         img {
             width: 100%;
         }
@@ -26,7 +47,7 @@
         flex-direction: column;
         gap: rem(24px);
         font: 300 #{rem(14px)} / 160% $ff;
-        color: #4A4A4A;
+        color: #4a4a4a;
         * {
             margin: 0;
         }
@@ -34,11 +55,17 @@
 
     &__info {
         max-width: rem(640px);
+        @include media('laptop') {
+            max-width: 100%;
+        }
     }
 
     .section-heading {
         text-align: left;
         max-width: rem(348px);
         align-items: flex-start;
+        @include media('laptop') {
+            max-width: 100%;
+        }
     }
 }

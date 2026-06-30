@@ -8,9 +8,20 @@
     background: $c_accent_drk;
     color: $c_white;
 
+    @include media('laptop') {
+        max-width: rem(420px);
+    }
+    @include media('tablet') {
+        margin: 0 auto;
+        max-width: rem(720px);
+    }
+
     &__pic {
         margin-bottom: rem(30px);
         aspect-ratio: 490 / 379;
+        @include media('laptop') {
+            margin-bottom: rem(24px);
+        }
 
         img {
             width: 100%;
@@ -26,14 +37,33 @@
         span {
             color: $c_accent;
         }
+
+        @include media('laptop') {
+            font-size: rem(32px);
+            margin-bottom: rem(24px);
+        }
     }
 
     .room-info {
         &__price {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+
+            -ms-overflow-style: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
             li {
+                flex-shrink: 0;
                 span {
                     font-size: rem(20px);
                 }
+            }
+
+            @include media('laptop') {
+                margin-bottom: rem(24px);
             }
         }
 
@@ -42,6 +72,10 @@
             border-bottom: none;
             padding-block: rem(40px) 0;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+            @include media('laptop') {
+                padding-block: rem(24px) 0;
+            }
         }
     }
 }

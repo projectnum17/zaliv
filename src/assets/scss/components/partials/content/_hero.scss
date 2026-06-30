@@ -177,6 +177,24 @@
         object-fit: cover;
     }
 
+    &--room {
+        .hero__details {
+            @include media('mobile') {
+                text-align: left;
+                align-items: flex-start;
+                gap: rem(24px);
+
+                .section-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .cta {
+            margin-bottom: 0;
+        }
+    }
+
     &--type {
         .container {
             align-items: stretch;

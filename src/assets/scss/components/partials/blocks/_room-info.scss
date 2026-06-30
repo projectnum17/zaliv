@@ -3,6 +3,9 @@
 @use '../../../base/media' as *;
 
 .room-info {
+    @include media('mobile') {
+        width: 100%;
+    }
     .cta {
         padding: rem(19px) rem(40px);
     }
@@ -15,8 +18,21 @@
         max-width: rem(482px);
         margin-bottom: rem(40px);
 
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+            max-width: 100%;
+        }
+
         span {
             font: 500 #{rem(22px)} / 100% $ff;
+            @include media('mobile') {
+                font-size: rem(16px);
+            }
+        }
+
+        @include media('mobile') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -25,6 +41,9 @@
         text-transform: uppercase;
         margin-bottom: rem(7px);
         color: #ffffff99;
+        @include media('mobile') {
+            font-size: rem(11px);
+        }
     }
 
     &__subtitle {
@@ -32,39 +51,81 @@
         text-transform: uppercase;
         margin-bottom: rem(7px);
         color: #ffffff99;
+        @include media('mobile') {
+            font-size: rem(10px);
+        }
     }
 
     &__val {
         font: 500 #{rem(18px)} / 100% $ff;
         letter-spacing: 1px;
         text-transform: uppercase;
+        @include media('mobile') {
+            font-size: rem(16px);
+        }
     }
 
     &__reserve {
+        flex-wrap: wrap;
         display: flex;
         align-items: center;
         gap: rem(36px);
         padding-bottom: rem(40px);
         margin-bottom: rem(40px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        @include media('mobile') {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem(18px);
+            padding-bottom: rem(24px);
+            margin-bottom: rem(24px);
+        }
     }
 
     &__terms {
+        flex-wrap: wrap;
         max-width: rem(622px);
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: rem(12px);
 
+        @include media('tablet') {
+            justify-content: center;
+            max-width: 100%;
+            gap: rem(24px);
+        }
+
+        @include media('mobile') {
+            max-width: 100%;
+            gap: rem(24px);
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            justify-content: flex-start;
+            -ms-overflow-style: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         li {
             display: flex;
             align-items: center;
             gap: rem(12px);
+            @include media('mobile') {
+                flex-shrink: 0;
+            }
         }
 
         img {
             width: rem(32px);
             height: rem(32px);
+            @include media('mobile') {
+                width: rem(24px);
+                height: rem(24px);
+            }
         }
     }
 }

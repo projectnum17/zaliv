@@ -11,7 +11,7 @@ div:has(> .faq-box) {
     padding-block: rem(30px);
     border-top: 1px solid $c_light;
     border-bottom: 1px solid $c_light;
-    @include media('mobile') {
+    @include media('tablet') {
         max-width: 100%;
         width: 100%;
         padding-block: rem(20px);
@@ -63,12 +63,16 @@ div:has(> .faq-box) {
 
             p {
                 color: inherit;
+                opacity: 0.4;
                 font-size: rem(11px);
             }
 
             span {
-                font-size: rem(13px);
+                font-size: rem(18px);
                 line-height: 90%;
+                @include media('mobile') {
+                    font-size: rem(13px);
+                }
             }
         }
     }

@@ -1,39 +1,32 @@
 export const initSliders = () => {
-    const simpleSlider = (
-        rootSelector,
-        { slidesPerView = 4, spaceBetween = 20, ...config } = {},
-    ) => {
-        if (typeof Swiper === 'undefined') return;
+    const initGroupedSliders = (selector, configBuilder) => {
+        const roots = document.querySelectorAll(selector);
 
-        const root = document.querySelector(rootSelector);
-        if (!root) return;
+        roots.forEach((root) => {
+            if (typeof Swiper === 'undefined') return;
 
-        const prevBtn = root.querySelector('.js-slider-prev');
-        const nextBtn = root.querySelector('.js-slider-next');
+            const slidesCount = root.querySelectorAll('.swiper-slide').length;
 
-        new Swiper(root.querySelector('.swiper'), {
-            slidesPerView: slidesPerView,
-            spaceBetween: spaceBetween,
-            speed: 900,
-            navigation: {
-                prevEl: prevBtn,
-                nextEl: nextBtn,
-            },
-            ...config,
+            const prevBtn = root.querySelector('.js-slider-prev');
+            const nextBtn = root.querySelector('.js-slider-next');
+
+            const config =
+                typeof configBuilder === 'function'
+                    ? configBuilder(root)
+                    : configBuilder || {};
+
+            root.swiper = new Swiper(root.querySelector('.swiper'), {
+                speed: 900,
+                navigation: {
+                    prevEl: prevBtn,
+                    nextEl: nextBtn,
+                },
+                ...config,
+            });
         });
     };
 
-    const eventsRoot = document.querySelector('.js-events-root');
-
-    if (eventsRoot) {
-        const slides = eventsRoot.querySelectorAll('.swiper-slide');
-
-        if (slides.length <= 2) {
-            eventsRoot.classList.add('is-sm');
-        }
-    }
-
-    simpleSlider('.js-relax-root', {
+    initGroupedSliders('.js-relax-root', {
         slidesPerView: 'auto',
         spaceBetween: 10,
         breakpoints: {
@@ -46,7 +39,7 @@ export const initSliders = () => {
         },
     });
 
-    simpleSlider('.js-fun-root', {
+    initGroupedSliders('.js-fun-root', {
         slidesPerView: 'auto',
         spaceBetween: 10,
         breakpoints: {
@@ -59,27 +52,47 @@ export const initSliders = () => {
         },
     });
 
-    simpleSlider('.js-events-root', {
-        slidesPerView: 2,
-        spaceBetween: 0,
+    initGroupedSliders('.js-events-root', {
+        slidesPerView: 1,
+        spaceBetween: 20,
         breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
             992: {
                 spaceBetween: 32,
             },
         },
     });
 
-    simpleSlider('.js-room-root', {
-        slidesPerView: 1.63,
-        spaceBetween: 60,
-        centeredSlides: true,
-    });
+    const roomRoot = document.querySelector('.js-room-root');
+
+    if (roomRoot) {
+        const slidesCount = roomRoot.querySelectorAll('.swiper-slide').length;
+        const hasEnoughSlides = slidesCount >= 3;
+
+        initGroupedSliders('.js-room-root', {
+            slidesPerView: hasEnoughSlides ? 1.1 : 1,
+            spaceBetween: 10,
+            centeredSlides: hasEnoughSlides,
+            breakpoints: {
+                768: {
+                    slidesPerView: hasEnoughSlides ? 1.5 : 1,
+                    spaceBetween: 24,
+                },
+                1025: {
+                    slidesPerView: hasEnoughSlides ? 1.63 : 1,
+                    spaceBetween: 60,
+                },
+            },
+        });
+    }
 
     const initPhotosGallery = () => {
-        const window = innerWidth < 768;
-        if (!window) return;
+        const isMob = innerWidth < 768;
+        if (!isMob) return;
 
-        simpleSlider('.js-photos-root', {
+        initGroupedSliders('.js-photos-root', {
             slidesPerView: 'auto',
             spaceBetween: 10,
         });

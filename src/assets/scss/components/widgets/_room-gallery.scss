@@ -11,14 +11,13 @@
 
     &__slide {
         width: auto;
-        opacity: .3;
+        opacity: 0.3;
         @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
         &.swiper-slide-active {
             opacity: 1;
         }
     }
-
 
     &__pic {
         aspect-ratio: 1010 / 648;
@@ -31,8 +30,8 @@
     }
 
     .navigation-panel {
-        padding-top: 0;
         max-width: rem(1072px);
+        padding-top: 0;
         justify-content: space-between;
         position: absolute;
         top: 50%;

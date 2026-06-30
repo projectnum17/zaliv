@@ -2,8 +2,8 @@ export const initAssortmentBox = () => {
     const boxes = document.querySelectorAll('.js-assortment-box');
     if (!boxes.length) return;
 
-    const window = innerWidth < 768;
-    if (window) return;
+    const isMob = innerWidth < 768;
+    if (isMob) return;
 
     let currentAnimationId = null;
 

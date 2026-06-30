@@ -4,6 +4,7 @@
 
 .events {
     position: relative;
+    overflow: hidden;
     padding-block: rem(187px) rem(127px);
     @include media('laptop') {
         padding-block: rem(96px);
@@ -11,6 +12,24 @@
 
     @include media('mobile') {
         padding-block: rem(56px) rem(28px);
+    }
+
+    &__cards {
+        @include media('mobile') {
+            overflow: visible;
+        }
+    }
+
+    &__collect {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: rem(32px);
+        @include media('desktop') {
+            gap: rem(12px);
+        }
+        @include media('tablet') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__bg {
@@ -28,25 +47,6 @@
 
     &__slide {
         height: auto;
-    }
-
-    &__root {
-        &:has(.swiper-button-lock) {
-            @include media('tablet') {
-                .events__wrapper {
-                    flex-direction: column;
-                    gap: rem(15px);
-                }
-            }
-        }
-
-        &.is-sm {
-            @include media('tablet') {
-                .events__slide {
-                    width: 100% !important;
-                }
-            }
-        }
     }
 
     .section-heading {

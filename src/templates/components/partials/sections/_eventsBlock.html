@@ -1,0 +1,22 @@
+<section class="events">
+    <div class="container">
+        {{> _sectionHeading
+            title = title
+            link = 1
+        }}
+        <div class="events__collect">
+                {{#if shortList}}
+                    {{#each (sliceCollect events.promo 0 2)}}
+                            {{> _eventBox this}}
+                    {{/each}}
+                {{else}}
+                    {{#each  events.promo}}
+                        <div class="events__slide swiper-slide">
+                            {{> _eventBox this}}
+                        </div>
+                    {{/each}}
+                {{/if}}
+        </div>
+    </div>
+    <img src="./assets/images/forest.png" alt="" class="events__bg">
+</section>

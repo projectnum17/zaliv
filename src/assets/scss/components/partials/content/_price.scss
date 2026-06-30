@@ -4,22 +4,39 @@
 
 .price {
     padding-block: rem(82px) rem(160px);
+    @include media('mobile') {
+        padding-block: rem(30px) rem(60px);
+    }
 
     .section-heading {
         margin: 0 auto;
         max-width: rem(855px);
         margin-bottom: rem(60px);
+        @include media('mobile') {
+            margin-bottom: rem(25px);
+
+            .waves-ico {
+                margin-bottom: rem(15px);
+            }
+        }
     }
 
     &__box {
         display: flex;
         align-items: center;
         position: relative;
+        @include media('mobile') {
+            flex-direction: column;
+        }
     }
 
     &__preview {
         aspect-ratio: 759 / 708;
         max-width: rem(759px);
+
+        @include media('mobile') {
+            aspect-ratio: 335 / 312;
+        }
 
         img {
             width: 100%;
@@ -43,15 +60,48 @@
         font: 300 #{rem(14px)} / 160% $ff;
         background: $c_accent_drk;
         color: $c_white;
+        @include media('laptop') {
+            padding: rem(30px) rem(40px);
+            gap: rem(24px) rem(12px);
+        }
+
+        @include media('mobile') {
+            position: relative;
+            transform: translate(0);
+            padding: rem(30px) rem(20px);
+            gap: rem(20px) rem(30px);
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 93%;
+            margin-top: rem(-20px);
+        }
 
         li {
             display: flex;
             flex-direction: column;
             gap: rem(12px);
+            font: 300 #{rem(14px)} / 160% $ff;
+
+            @include media('laptop') {
+                gap: rem(8px);
+            }
+            @include media('mobile') {
+                font-size: rem(12px);
+                gap: rem(9px);
+                align-items: center;
+                text-align: center;
+            }
 
             img {
                 width: rem(56px);
                 height: rem(56px);
+                @include media('laptop') {
+                    width: rem(42px);
+                    height: rem(42px);
+                }
+                @include media('mobile') {
+                    width: rem(40px);
+                    height: rem(40px);
+                }
             }
         }
     }

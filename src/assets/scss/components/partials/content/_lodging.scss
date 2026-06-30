@@ -4,10 +4,20 @@
 
 .lodging {
     padding-block: rem(170px);
+    @include media('tablet') {
+        padding-block: rem(96px);
+    }
+    @include media('mobile') {
+        padding-block: rem(60px);
+    }
 
     &__info {
         max-width: rem(447px);
         position: relative;
+        @include media('tablet') {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__pic {
@@ -17,14 +27,30 @@
         z-index: -1;
         position: absolute;
         max-width: rem(378px);
+        @include media('mobile') {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            max-width: rem(318px);
+        }
     }
 
     &__noninclude {
         margin-bottom: rem(67px);
+
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+        }
+
         p {
             font: 400 #{rem(24px)} / 110% $ff;
             letter-spacing: -1px;
             margin: 0 0 rem(15px) 0;
+
+            @include media('mobile') {
+                font-size: rem(18px);
+            }
+
             span {
                 color: $c_accent;
             }
@@ -47,6 +73,11 @@
                 padding-left: rem(24px);
                 position: relative;
                 font: 300 #{rem(14px)} / 160% $ff;
+
+                @include media('mobile') {
+                    font-size: rem(12px);
+                }
+
                 span,
                 a {
                     text-decoration: underline;
@@ -61,6 +92,9 @@
                     width: rem(8px);
                     height: rem(8px);
                     background: $c_accent;
+                    @include media('mobile') {
+                        top: rem(6px);
+                    }
                 }
             }
         }
@@ -83,6 +117,9 @@
         align-items: flex-start;
         text-align: left;
         margin-bottom: rem(37px);
+        @include media('mobile') {
+            margin-bottom: rem(24px);
+        }
     }
 
     .container {
@@ -90,9 +127,18 @@
         align-items: center;
         justify-content: space-between;
         gap: rem(24px);
+        @include media('tablet') {
+            flex-direction: column;
+            gap: rem(20px);
+        }
     }
 
     .cta {
         margin-bottom: rem(36px);
+        @include media('mobile') {
+            width: max-content;
+            padding: rem(18px) rem(40px);
+            margin-bottom: rem(20px);
+        }
     }
 }
