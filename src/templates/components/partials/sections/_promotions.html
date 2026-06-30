@@ -1,6 +1,8 @@
 <section class="promo">
     <div class="container">
-        {{> _filterPanel buttons = filterButtons}}
+        <div class="promo__filter">
+            {{> _filterPanel buttons = filterButtons}}
+        </div>
         <div class="promo__boxes">
             {{#each events.promo}}
                 {{> _eventBox this}}

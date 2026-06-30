@@ -4,11 +4,23 @@
 
 .promo {
     padding-block: rem(35px) rem(170px);
+    @include media('tablet') {
+        padding-block: rem(20px) rem(96px);
+    }
+    @include media('mobile') {
+        padding-block: rem(20px) rem(60px);
+    }
 
     &__boxes {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: rem(32px);
+        @include media('tablet') {
+            gap: rem(12px);
+        }
+        @include media('mobile') {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__empty {
@@ -17,5 +29,9 @@
         font: 400 #{rem(30px)} / 100% $ff_accent;
         text-transform: uppercase;
         letter-spacing: -1px;
+        @include media('mobile') {
+            grid-column: span 1;
+            font-size: rem(22px);
+        }
     }
 }
