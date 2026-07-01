@@ -561,12 +561,16 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="javascript: void(0)" class="cta cta--sm js-cta">Забронювати</a>
+                    <a href="javascript: void(0)" class="cta js-cta">Забронювати</a>
+                    <button type="button" class="header__burger js-menu-trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </header>
         <main class="main">
-
             <section class="hero">
                 <div class="container">
                     <div class="hero__info">
@@ -620,7 +624,7 @@
                                             Гості
                                         </label>
                                     </div>
-                                    <button type="submit" class="cta cta--lg">
+                                    <button type="submit" class="cta">
                                         Знайти номер
                                         <svg>
                                             <use href="./assets/images/icons/svg/sprite.svg#icoSearch"></use>
@@ -642,7 +646,7 @@
                     <a href="javascript: void(0)" class="assortment-box js-assortment-box">
                         <img src="./assets/images/assortment_1.jpg" alt="Preview">
                         <div class="assortment-box__info">
-                            <div class="assortment-box__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <div class="assortment-box__title">
@@ -662,7 +666,7 @@
                         <img src="./assets/images/assortment_2.jpg" alt="Preview">
                         <span class="assortment-box__discount">-15%</span>
                         <div class="assortment-box__info">
-                            <div class="assortment-box__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <div class="assortment-box__title">
@@ -681,7 +685,7 @@
                     <a href="javascript: void(0)" class="assortment-box js-assortment-box">
                         <img src="./assets/images/assortment_3.jpg" alt="Preview">
                         <div class="assortment-box__info">
-                            <div class="assortment-box__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <div class="assortment-box__title">
@@ -700,7 +704,7 @@
                     <a href="javascript: void(0)" class="assortment-box js-assortment-box">
                         <img src="./assets/images/assortment_4.jpg" alt="Preview">
                         <div class="assortment-box__info">
-                            <div class="assortment-box__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <div class="assortment-box__title">
@@ -720,8 +724,8 @@
             </section>
             <section class="entertainment">
                 <div class="container">
-                    <div class="section-heading section-heading--lg">
-                        <div class="section-heading__deco">
+                    <div class="section-heading">
+                        <div class="waves-ico">
                             <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                         </div>
                         <h2 class="section-subtitle">Все для вашого <span>відпочинку</span>
@@ -860,13 +864,13 @@
                             </button>
                         </div>
                     </div>
-                    <img src="./assets/images/icons/logo-text.svg" alt="" class="entertainment__text">
+                    <img src="./assets/images/icons/logo-text.svg" alt="" class="bg-text">
                 </div>
             </section>
             <section class="entertainment entertainment--bg">
                 <div class="container">
                     <div class="section-heading">
-                        <div class="section-heading__deco">
+                        <div class="waves-ico">
                             <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                         </div>
                         <h2 class="section-subtitle">У нас вам <span>не буде сумно</span>
@@ -981,7 +985,7 @@
             <section class="plan">
                 <div class="container">
                     <div class="section-heading">
-                        <div class="section-heading__deco">
+                        <div class="waves-ico">
                             <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                         </div>
                         <h2 class="section-subtitle">
@@ -991,7 +995,9 @@
                     </div>
                     <div class="plan__box">
                         <div class="plan__territory">
-                            <img loading="lazy" decoding="async" src="./assets/images/plan.jpg" alt="Picture">
+                            <div>
+                                <img loading="lazy" decoding="async" src="./assets/images/plan.jpg" alt="Picture">
+                            </div>
                         </div>
                         <ul class="plan__schema">
                             <li>
@@ -1053,73 +1059,53 @@
                             </span>
                         </a>
                     </div>
-                    <div class="events__root js-events-root">
-                        <div class="events__cards swiper">
-                            <div class="events__wrapper swiper-wrapper">
-                                <div class="events__slide swiper-slide">
-                                    <a href="javascript: void(0)" class="event-box">
-                                        <div class="event-box__pic">
-                                            <img src="./assets/images/promo_1.jpg" alt="Picture">
-                                        </div>
-                                        <div class="event-box__details">
-                                            <div class="event-box__head">
-                                                <div class="event-box__offer">
-                                                    <span>5-6</span>
-                                                    <p>Червня
-                                                        <br> 2026
-                                                    </p>
+                    <div class="events__collect">
+                        <a href="javascript: void(0)" class="event-box">
+                            <div class="event-box__pic">
+                                <img src="./assets/images/promo_1.jpg" alt="Picture">
+                            </div>
+                            <div class="event-box__details">
+                                <div class="event-box__head">
+                                    <div class="event-box__offer">
+                                        <span>5-6</span>
+                                        <p>Червня
+                                            <br> 2026
+                                        </p>
 
-                                                </div>
-                                                <div class="event-box__deco">
-                                                    <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
-                                                </div>
-                                            </div>
-                                            <div class="event-box__info">
-                                                <h3>Великий сімейний пікнік 6 та 7 червня в Заливі!</h3>
-                                                <p>Готуємо найсоковитіші стейки та овочі на грилі. Розваги для дітей, майстер-класи та багато смачної їжі.️</p>
-                                            </div>
-                                        </div>
-                                    </a>
+                                    </div>
+                                    <div class="waves-ico">
+                                        <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
+                                    </div>
                                 </div>
-                                <div class="events__slide swiper-slide">
-                                    <a href="javascript: void(0)" class="event-box">
-                                        <div class="event-box__pic">
-                                            <img src="./assets/images/promo_2.jpg" alt="Picture">
-                                        </div>
-                                        <div class="event-box__details">
-                                            <div class="event-box__head">
-                                                <div class="event-box__offer">
-
-                                                    <span>-15%</span>
-                                                    <p>Знижка
-                                                        <br> на проживання
-                                                    </p>
-                                                </div>
-                                                <div class="event-box__deco">
-                                                    <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
-                                                </div>
-                                            </div>
-                                            <div class="event-box__info">
-                                                <h3>Плануйте відпочинок вигідно</h3>
-                                                <p>Отримайте знижку -15% на проживання у будь-якому з наших будиночків. Обирайте свій формат — від затишного зрубу до котеджу над водою.</p>
-                                            </div>
-                                        </div>
-                                    </a>
+                                <div class="event-box__info">
+                                    <h3>Великий сімейний пікнік 6 та 7 червня в Заливі!</h3>
+                                    <p>Готуємо найсоковитіші стейки та овочі на грилі. Розваги для дітей, майстер-класи та багато смачної їжі.️</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="navigation-panel">
-                            <button type="button" class="navigation-panel__btn js-slider-prev">
-                                <svg>
-                                    <use href="./assets/images/icons/svg/sprite.svg#icoArrowR-thin"></use>
-                                </svg>
-                            </button>
-                            <button type="button" class="navigation-panel__btn js-slider-next">
-                                <svg>
-                                    <use href="./assets/images/icons/svg/sprite.svg#icoArrowR-thin"></use>
-                                </svg>
-                            </button>
-                        </div>
+                        </a>
+                        <a href="javascript: void(0)" class="event-box">
+                            <div class="event-box__pic">
+                                <img src="./assets/images/promo_2.jpg" alt="Picture">
+                            </div>
+                            <div class="event-box__details">
+                                <div class="event-box__head">
+                                    <div class="event-box__offer">
+
+                                        <span>-15%</span>
+                                        <p>Знижка
+                                            <br> на проживання
+                                        </p>
+                                    </div>
+                                    <div class="waves-ico">
+                                        <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
+                                    </div>
+                                </div>
+                                <div class="event-box__info">
+                                    <h3>Плануйте відпочинок вигідно</h3>
+                                    <p>Отримайте знижку -15% на проживання у будь-якому з наших будиночків. Обирайте свій формат — від затишного зрубу до котеджу над водою.</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <img src="./assets/images/forest.png" alt="" class="events__bg">
@@ -1128,7 +1114,7 @@
                 <div class="container">
                     <div class="faq__preview">
                         <div class="section-heading">
-                            <div class="section-heading__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <h2 class="section-subtitle">Відповіді на ваші <span>запитання</span>
@@ -1149,7 +1135,9 @@
                                 <span></span>
                             </button>
                             <div class="faq-box__answer">
-                                <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                <div>
+                                    <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="faq-box">
@@ -1158,7 +1146,9 @@
                                 <span></span>
                             </button>
                             <div class="faq-box__answer">
-                                <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                <div>
+                                    <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="faq-box">
@@ -1167,7 +1157,9 @@
                                 <span></span>
                             </button>
                             <div class="faq-box__answer">
-                                <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                <div>
+                                    <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                </div>
                             </div>
                         </div>
                         <div class="faq-box">
@@ -1176,7 +1168,9 @@
                                 <span></span>
                             </button>
                             <div class="faq-box__answer">
-                                <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                <div>
+                                    <p>Для наших маленьких гостей працює ігровий майданчик, дитяча кімната з батутами та спортивний майданчик.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1186,7 +1180,7 @@
                 <div class="container">
                     <div class="entice__content">
                         <div class="section-heading">
-                            <div class="section-heading__deco">
+                            <div class="waves-ico">
                                 <img src="./assets/images/icons/ico-waves.svg" alt="Icon">
                             </div>
                             <h2 class="section-subtitle">Проведи свій відпочинок <span>з нами</span>
@@ -1195,7 +1189,7 @@
                         </div>
                         <div class="entice__call">
                             <p>Інформаційний центр</p>
-                            <a href="tel:+380999999999">+38 (099) 999-99-99</a>
+                            <a class="phone-call" href="tel:+380999999999">+38 (099) 999-99-99</a>
                         </div>
                         <div class="entice__btns">
                             <a href="javascript: void(0)" class="action">Послуги і ціни</a>
@@ -1216,11 +1210,11 @@
                         <div class="footer__support">
                             <div class="footer__call">
                                 <p class="footer__title">Відділ бронювання</p>
-                                <a href="tel:+380999999999" class="footer__connect">+38 (099) 999-99-99</a>
+                                <a href="tel:+380999999999" class="phone-call">+38 (099) 999-99-99</a>
                             </div>
                             <div class="footer__call">
                                 <p class="footer__title">Бронювання житла</p>
-                                <a href="tel:+380999999999" class="footer__connect">+38 (099) 999-99-99</a>
+                                <a href="tel:+380999999999" class="phone-call">+38 (099) 999-99-99</a>
                             </div>
                         </div>
                         <div class="footer__address">
@@ -1234,136 +1228,130 @@
                         </a>
                     </div>
                     <div class="footer-nav">
-                        <div class="footer-nav__col">
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Активно відпочивати</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Спортивний майданчик</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">САПи та каяки </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Риболовля</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Охота </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Фото-сафарі</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Фітнес-центр</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Вело тури</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Грибні тури</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Ягідні тури </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Активно відпочивати</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Спортивний майданчик</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">САПи та каяки </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Риболовля</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Охота </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Фото-сафарі</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Фітнес-центр</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Вело тури</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Грибні тури</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Ягідні тури </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="footer-nav__col">
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Релаксувати</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Банний комплекс</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Басейн </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Озеро </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Годувати тваринок </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Їсти</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Ресторан локальної кухні</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">BBQ фудкорт</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Озеро </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Бар біля басейну</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Жити</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Будиночки зі зрубу </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Котеджі «Хілс»</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Котеджі «Мальдиви» </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Глемпінг біля озера </a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Релаксувати</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Банний комплекс</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Басейн </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Озеро </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Годувати тваринок </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="footer-nav__col">
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Святкувати</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Весілля</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Корпоративи</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Особисті подїї</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Дітям</p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Дитяча кімната </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Анімація </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Спортивний майданчик </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer-nav__box">
-                                <p class="footer-nav__title">Важливо знати </p>
-                                <ul class="footer-nav__list">
-                                    <li>
-                                        <a href="javascript: void(0)">Як нас знайти</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Афіша подій</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript: void(0)">Партнерство та інвестування</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Їсти</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Ресторан локальної кухні</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">BBQ фудкорт</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Озеро </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Бар біля басейну</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Жити</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Будиночки зі зрубу </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Котеджі «Хілс»</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Котеджі «Мальдиви» </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Глемпінг біля озера </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Святкувати</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Весілля</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Корпоративи</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Особисті подїї</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Дітям</p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Дитяча кімната </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Анімація </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Спортивний майданчик </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-nav__box">
+                            <p class="footer-nav__title">Важливо знати </p>
+                            <ul class="footer-nav__list">
+                                <li>
+                                    <a href="javascript: void(0)">Як нас знайти</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Афіша подій</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0)">Партнерство та інвестування</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1373,6 +1361,204 @@
             </div>
             <img src="./assets/images/bg-forest.png" alt="" class="footer__bg">
         </footer>
+        <div class="mobile-menu js-menu-box">
+            <div class="container">
+                <div class="mobile-menu__box">
+                    <ul class="mobile-menu__lang">
+                        <li>
+                            <a href="javascript: void(0)" class="is-active">ua</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">ru</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">en</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-menu__nav">
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Жити
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Їсти
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Релаксувати
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Активно відпочивати 
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Святкувати
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Дітям
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item__has-children">
+                            <a href="javascript: void(0)">
+                                Важливо знати 
+                                <span></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript: void(0)">Будиночки зі зрубу</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Hills»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Котеджі «Мальдиви»</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript: void(0)">Глемпінг біля озера</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="javascript: void(0)" class="cta js-cta">Забронювати</a>
+                    <div class="mobile-menu__info">
+                        <p class="mobile-menu__title">Відділ бронювання</p>
+                        <a href="tel:+380999999999" class="mobile-menu__connect">+38 (099) 999-99-99</a>
+                    </div>
+                    <div class="mobile-menu__info">
+                        <p class="mobile-menu__title">ми знаходимось</p>
+                        <p class="mobile-menu__connect">
+                            Рівненська обл, Сарненський р-н, с. Страшево , вул Робітнича, 3
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
 </html>
