@@ -1,5 +1,25 @@
 'use strict';
 
+const loader = document.querySelector('.js-loader');
+let loaderHidden = false;
+
+const hideLoader = () => {
+    if (loader && !loaderHidden) {
+        loaderHidden = true;
+        loader.classList.add('is-hide');
+
+        setTimeout(() => loader.remove(), 500);
+    }
+};
+
+if (document.readyState === 'complete') {
+    hideLoader();
+} else {
+    window.addEventListener('load', hideLoader);
+}
+
+setTimeout(hideLoader, 7000);
+
 const initHeader = () => {
     const header = document.querySelector('.js-header');
     if (!header) return;
