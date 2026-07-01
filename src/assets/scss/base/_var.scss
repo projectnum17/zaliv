@@ -25,6 +25,7 @@ $gr_accent: linear-gradient(90deg, #22351e 0%, #2e4929 100%);
 
 @include media('tablet') {
     :root {
+        --header-h: #{rem(67px)};
     }
 }
 

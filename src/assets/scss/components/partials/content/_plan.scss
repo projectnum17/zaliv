@@ -24,7 +24,6 @@ section.plan:last-child {
     &__territory {
         @include media('mobile') {
             overflow: auto;
-            overflow: auto;
             scrollbar-width: none;
 
             -ms-overflow-style: none;

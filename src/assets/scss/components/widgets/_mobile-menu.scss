@@ -1,0 +1,248 @@
+@use '../../base/var' as *;
+@use '../../base/mixins' as *;
+@use '../../base/media' as *;
+
+.mobile-menu {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 100;
+    transform: translateX(-100%);
+    background: $c_accent_drk;
+    color: $c_white;
+    @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+
+        a {
+            width: 100%;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        & > li {
+            padding-bottom: rem(15px);
+            border-bottom: 1px solid #ffffff33;
+
+            &.is-open {
+                & > a {
+                    color: $c_accent;
+                    span {
+                        transform: rotate(90deg);
+
+                        &::after {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    padding-top: rem(10px);
+                    & > li {
+                        grid-template-rows: 1fr;
+                    }
+                }
+            }
+
+            &:not(:has(.sub-menu)) {
+                & > a {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            &:has(.sub-menu) {
+                & > a {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: rem(2px);
+
+                    span {
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        flex-shrink: 0;
+                        border-radius: 50%;
+                        width: rem(30px);
+                        height: rem(30px);
+                        background: $c_accent;
+                        @include transitions(
+                            0.3s,
+                            cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                        );
+
+                        @include media('mobile') {
+                            width: rem(24px);
+                            height: rem(24px);
+                        }
+
+                        &::after,
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: rem(15px);
+                            height: rem(1px);
+                            background: #fff;
+                            @include transitions(
+                                0.3s,
+                                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                            );
+                            @include media('mobile') {
+                                width: rem(12px);
+                            }
+                        }
+
+                        &::before {
+                            transform: translate(-50%, -50%) rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            & > a {
+                font: 300 #{rem(14px)} / 160% $ff;
+            }
+        }
+
+        a {
+            font: inherit;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                color: $c_accent;
+            }
+        }
+    }
+
+    .sub-menu {
+        @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+        a {
+            font: 200 #{rem(14px)} / 160% $ff;
+        }
+
+        & > li {
+            display: grid;
+            grid-template-rows: 0fr;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            & > ul {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: rem(10px);
+            }
+        }
+    }
+
+    &__box {
+        padding-block: calc(var(--header-h) + #{rem(16px)}) rem(59px);
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__lang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(20px);
+        margin-bottom: rem(15px);
+        padding-bottom: rem(26px);
+        border-bottom: 1px solid #ffffff33;
+
+        li {
+            font: 500 #{rem(14px)} / 100% $ff;
+            text-transform: uppercase;
+
+            &:not(:last-child) {
+                a {
+                    align-items: center;
+                    gap: rem(20px);
+
+                    &::after {
+                        content: '';
+                        height: rem(16px);
+                        border-radius: 2px;
+                        width: 2px;
+                        background: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+
+            a {
+                display: inline-flex;
+                font: inherit;
+                @include transitions(
+                    0.5s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+
+                &.is-active {
+                    color: $c_accent;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: rem(15px);
+        margin-bottom: rem(30px);
+    }
+
+    &__title {
+        font: 400 #{rem(12px)} / 100% $ff;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__connect {
+        font: 500 #{rem(18px)} / 100% $ff;
+    }
+
+    .cta {
+        margin-block: rem(30px);
+        padding: rem(16px);
+        font-size: rem(13px);
+    }
+}

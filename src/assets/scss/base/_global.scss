@@ -20,7 +20,8 @@ body {
     color: $c_accent_drk;
     @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
 
-    &.is-locked {
+    &.is-locked,
+    &.is-menu-open {
         overflow: hidden;
     }
 }

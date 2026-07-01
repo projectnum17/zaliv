@@ -2,13 +2,19 @@
 @use '../../base/mixins' as *;
 @use '../../base/media' as *;
 
+body:has(.mobile-menu.is-open) {
+    .header {
+        background: $c_accent_drk;
+    }
+}
+
 .header {
     max-width: rem(2560.98px);
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
     position: fixed;
-    z-index: 5;
+    z-index: 101;
     top: 0;
     padding-block: rem(10px);
     min-height: var(--header-h);
@@ -29,10 +35,26 @@
         align-items: center;
         justify-content: space-between;
         gap: rem(12px);
+        @media (max-width: 1250.98px) {
+            padding-inline: rem(10px);
+        }
+
+        @include media('tablet') {
+            padding-inline: $container_pdd;
+        }
     }
 
     &__logo {
         max-width: rem(132px);
+
+        @media (max-width: 1250.98px) {
+            max-width: rem(90px);
+        }
+
+        @include media('tablet') {
+            max-width: rem(114px);
+        }
+
         img {
             width: 100%;
         }
@@ -41,6 +63,9 @@
     &__nav {
         max-width: rem(890px);
         width: 100%;
+        @include media('tablet') {
+            display: none;
+        }
     }
 
     &__list {
@@ -50,8 +75,15 @@
         justify-content: space-between;
         gap: rem(12px);
 
+        @media (max-width: 1250.98px) {
+            gap: rem(2px);
+        }
+
         & > li {
             font: 400 #{rem(14px)} / 100% $ff;
+            @media (max-width: 1250.98px) {
+                font-size: rem(12px);
+            }
 
             &:nth-child(n + 8) {
                 display: none;
@@ -75,6 +107,10 @@
                     align-items: center;
                     gap: rem(10px);
 
+                    @media (max-width: 1250.98px) {
+                        gap: rem(5px);
+                    }
+
                     &::after {
                         content: '';
                         width: rem(10px);
@@ -86,6 +122,10 @@
                             0.3s,
                             cubic-bezier(0.768, 0.304, 0.496, 0.884)
                         );
+                        @media (max-width: 1250.98px) {
+                            width: rem(8px);
+                            height: rem(5px);
+                        }
                     }
 
                     &.is-active {
@@ -124,6 +164,12 @@
         display: flex;
         align-items: center;
         gap: rem(22px);
+        @media (max-width: 1250.98px) {
+            gap: rem(10px);
+        }
+        @include media('tablet') {
+            gap: rem(30px);
+        }
     }
 
     &__lang {
@@ -143,6 +189,10 @@
             .header__lang-current svg {
                 transform: rotate(180deg);
             }
+        }
+
+        @include media('tablet') {
+            display: none;
         }
 
         &-current {
@@ -218,6 +268,61 @@
             );
             @include hover {
                 background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+        flex-shrink: 0;
+        width: rem(25px);
+        height: rem(17px);
+        position: relative;
+
+        @include media('tablet') {
+            display: inline-flex;
+        }
+
+        &.is-active {
+            span {
+                &:nth-child(2) {
+                    width: 0;
+                }
+
+                &:first-child {
+                    top: rem(8px);
+                    transform: rotate(45deg);
+                }
+
+
+                &:last-child {
+                    bottom: rem(8px);
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: rem(1px);
+            background: $c_white;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+
+            &:first-child {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &:last-child {
+                bottom: 0;
             }
         }
     }
@@ -302,5 +407,12 @@
 
     .cta {
         padding: rem(14px) rem(30px);
+        @media (max-width: 1250.98px) {
+            padding: rem(12px) rem(20px);
+        }
+        @include media('tablet') {
+            font-size: rem(12px);
+            padding: rem(12px) rem(15px);
+        }
     }
 }
