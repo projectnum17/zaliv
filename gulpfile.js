@@ -174,60 +174,53 @@ function fileExists(path) {
 }
 
 function js(done) {
-    const entries = {};
+    const tasks = [];
 
     const appPath = 'src/assets/js/app.js';
     const libsPath = 'src/assets/js/libs.js';
 
-    // всегда пробуем добавить app
+    const distJs = nodePath.join(distPath, 'assets/js');
+
+    // APP (просто копия + min версия через esbuild)
     if (fileExists(appPath)) {
-        entries.app = appPath;
+        // обычная копия
+        tasks.push(src(appPath).pipe(dest(distJs)));
+
+        if (isProd) {
+            // минифицированная версия
+            tasks.push(
+                esbuild.build({
+                    entryPoints: { app: appPath },
+                    bundle: true,
+                    format: 'esm',
+                    target: ['es2020'],
+                    legalComments: 'none',
+                    minify: true,
+                    sourcemap: false,
+                    outdir: distJs,
+                    entryNames: '[name].min',
+                }),
+            );
+        }
     }
 
-    // libs — только если существует
+    // LIBS (только копия, всегда без изменений)
     if (fileExists(libsPath)) {
-        entries.libs = libsPath;
+        tasks.push(
+            src(libsPath)
+                .pipe(dest(distJs))
+                .pipe(gulpif(isProd, rename({ suffix: '.min' })))
+                .pipe(gulpif(isProd, dest(distJs))),
+        );
     }
 
-    // если вообще ничего нет — просто выходим
-    if (Object.keys(entries).length === 0) {
+    if (!tasks.length) {
         console.log('[JS] no entry files found');
         done();
         return;
     }
 
-    // Базовая функция сборщика esbuild
-    const build = (minify, suffix, sourcemap) =>
-        esbuild.build({
-            entryPoints: entries,
-
-            bundle: true,
-            format: 'esm',
-            target: ['es2020'],
-            legalComments: 'none',
-
-            minify,
-            sourcemap,
-
-            outdir: nodePath.join(distPath, 'assets/js'),
-            entryNames: `[name]${suffix}`,
-        });
-
-    // Определяем массив задач выполнения
-    let tasks;
-
-    if (isProd) {
-        // Для prod запускаем сборку ОБЫЧНОГО и МИНИФИЦИРОВАННОГО файлов одновременно
-        tasks = Promise.all([
-            build(false, '', false), // обычный без sourcemap
-            build(true, '.min', false), // минифицированный .min
-        ]);
-    } else {
-        // Для dev только обычный с sourcemap
-        tasks = build(false, '', true);
-    }
-
-    tasks
+    Promise.all(tasks)
         .then(() => {
             browserSync.reload();
             done();
@@ -311,7 +304,7 @@ function watchFiles() {
 // TASKS
 const build = series(
     clean,
-    parallel(html, css, js, images,spriteCopy,  fonts, video, audio),
+    parallel(html, css, js, images, spriteCopy, fonts, video, audio),
 );
 const dev = series(build, parallel(watchFiles, serve));
 

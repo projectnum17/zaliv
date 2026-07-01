@@ -4,7 +4,7 @@
 
 .assortment-box {
     $pdd_inline: #{rem(40px)};
-    $card_width: #{rem(633px)};
+    --card_width: #{rem(633px)};
     min-width: rem(425px);
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@
     @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
     @include media('laptop') {
         min-width: rem(375px);
-        $card_width: #{rem(375px)};
+        --card_width: #{rem(375px)};
     }
     @include media('tablet') {
         height: rem(550px);
@@ -29,7 +29,7 @@
     }
 
     @include hover {
-        min-width: $card_width;
+        min-width: var(--card_width);
         .assortment-box__details {
             grid-template-rows: 1fr;
         }
@@ -163,7 +163,7 @@
     }
 
     &__details {
-        min-width: calc($card_width - calc($pdd_inline * 2));
+        min-width: calc(var(--card_width) - calc($pdd_inline * 2));
         opacity: 0;
         visibility: hidden;
         transform: translateY(#{rem(50px)});

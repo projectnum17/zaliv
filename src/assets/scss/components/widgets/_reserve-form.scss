@@ -39,6 +39,9 @@
         margin: 0;
         gap: rem(10px);
         width: 100%;
+        @include media('mobile') {
+            width: 100%;
+        }
         svg {
             width: rem(16px);
             height: rem(16px);
