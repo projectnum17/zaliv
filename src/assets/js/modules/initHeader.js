@@ -73,13 +73,16 @@ export const initHeader = () => {
 
         const ddMenu = menuBox.querySelectorAll('li:has(.sub-menu)');
 
-        ddMenu.forEach((el) => {
-            el.addEventListener('click', (e) => {
+        ddMenu.forEach((item) => {
+            const trigger = item.querySelector(':scope > a');
+
+            trigger?.addEventListener('click', (e) => {
+                e.preventDefault();
                 e.stopPropagation();
-                el.classList.toggle('is-open');
+
+                item.classList.toggle('is-open');
             });
         });
-
         const openState = () => {
             menuBox.classList.add('is-open');
             menuTrigger.classList.add('is-active');
@@ -90,11 +93,8 @@ export const initHeader = () => {
             menuBox.classList.remove('is-open');
             menuTrigger.classList.remove('is-active');
             document.body.classList.remove('is-menu-open');
-            ddMenu.forEach((el) => {
-                el.addEventListener('click', (e) => {
-                    el.classList.remove('is-open');
-                });
-            });
+
+            ddMenu.forEach((item) => item.classList.remove('is-open'));
         };
 
         const toggleStatement = () => {

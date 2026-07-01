@@ -10,7 +10,7 @@ div:has(> .filter-panel) {
 .filter-panel {
     display: flex;
     align-items: center;
-    margin-bottom: rem(40px);
+    padding-bottom: rem(40px);
     gap: rem(40px);
     overflow-x: auto;
     overflow-y: hidden;
@@ -20,7 +20,7 @@ div:has(> .filter-panel) {
         display: none;
     }
     @include media('mobile') {
-        margin-bottom: rem(20px);
+        padding-bottom: rem(20px);
         gap: rem(20px);
     }
 
