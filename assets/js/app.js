@@ -49,10 +49,12 @@ var initHeader = () => {
     const menuBox = document.querySelector(".js-menu-box");
     if (!menuTrigger || !menuBox) return;
     const ddMenu = menuBox.querySelectorAll("li:has(.sub-menu)");
-    ddMenu.forEach((el) => {
-      el.addEventListener("click", (e) => {
+    ddMenu.forEach((item) => {
+      const trigger = item.querySelector(":scope > a");
+      trigger?.addEventListener("click", (e) => {
+        e.preventDefault();
         e.stopPropagation();
-        el.classList.toggle("is-open");
+        item.classList.toggle("is-open");
       });
     });
     const openState = () => {
@@ -64,11 +66,7 @@ var initHeader = () => {
       menuBox.classList.remove("is-open");
       menuTrigger.classList.remove("is-active");
       document.body.classList.remove("is-menu-open");
-      ddMenu.forEach((el) => {
-        el.addEventListener("click", (e) => {
-          el.classList.remove("is-open");
-        });
-      });
+      ddMenu.forEach((item) => item.classList.remove("is-open"));
     };
     const toggleStatement = () => {
       menuTrigger.classList.contains("is-active") ? closeState() : openState();

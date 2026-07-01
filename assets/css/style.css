@@ -2861,7 +2861,7 @@ div:has(> .filter-panel) {
 .filter-panel {
   display: flex;
   align-items: center;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
   gap: 2.5rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -4254,7 +4254,7 @@ div:has(> .filter-panel) {
   }
 
   .filter-panel {
-    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     gap: 1.25rem;
   }
 
