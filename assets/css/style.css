@@ -2096,6 +2096,7 @@ body:has(.header.is-transform) .room-box {
 }
 
 .event-box__pic {
+  height: 100%;
   overflow: hidden;
   aspect-ratio: 348/354;
 }
