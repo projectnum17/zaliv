@@ -251,10 +251,11 @@ const initSliders = () => {
         spaceBetween: 20,
         breakpoints: {
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             992: {
                 spaceBetween: 32,
+                slidesPerView: 2,
             },
         },
     });
